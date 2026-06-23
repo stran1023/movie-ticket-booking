@@ -1,0 +1,70 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+
+{% block extrahead %}
+<style>
+    .small-box,
+    .small-box h4,
+    .small-box p,
+    .small-box a {
+        color: #fff !important;
+    }
+
+    .small-box-footer {
+        color: #fff !important;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+
+    <h1 style="margin-bottom: 20px;">👥 User Management</h1>
+
+    <div class="row">
+
+        <!-- Users -->
+        <div class="col-lg-4 col-6">
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h4>Users</h4>
+                    <p>Manage system users</p>
+                </div>
+                <a href="{% url 'admin:users_user_changelist' %}" class="small-box-footer">
+                    Go <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Groups -->
+        <div class="col-lg-4 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h4>Groups</h4>
+                    <p>Permissions & roles</p>
+                </div>
+                <a href="{% url 'admin:auth_group_changelist' %}" class="small-box-footer">
+                    Go <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Profiles -->
+        <div class="col-lg-4 col-6">
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h4>Profiles</h4>
+                    <p>User details & info</p>
+                </div>
+                <a href="{% url 'admin:users_userprofile_changelist' %}" class="small-box-footer">
+                    Go <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

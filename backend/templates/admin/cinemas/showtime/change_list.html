@@ -1,0 +1,988 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block title %}Showtimes — {{ current_date_display }}{% endblock %}
+{% block content %}
+<style>
+    /* ── Layout ────────────────────────────────────────────────── */
+    .st-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .st-header h2 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .st-header-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    /* ── Date navigation ──────────────────────────────────────── */
+    .date-nav {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #f8f9fa;
+        padding: 8px 16px;
+        border-radius: 8px;
+        margin-bottom: 14px;
+    }
+
+    .date-nav a {
+        text-decoration: none;
+        color: #417690;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 2px 10px;
+        border-radius: 4px;
+    }
+
+    .date-nav a:hover {
+        background: #e0ecf4;
+    }
+
+    .date-nav .date-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a1a2e;
+        min-width: 240px;
+        text-align: center;
+    }
+
+    .date-nav input[type="date"] {
+        padding: 4px 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 13px;
+    }
+
+    /* ── Status filter ────────────────────────────────────────── */
+    .filter-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+    }
+
+    .filter-row label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .filter-row select {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 13px;
+    }
+
+    .filter-row .btn-sm {
+        padding: 5px 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .btn-primary {
+        background: #417690;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background: #2c5364;
+    }
+
+    .btn-add {
+        background: #1e8e3e;
+        color: #fff;
+    }
+
+    .btn-add:hover {
+        background: #167a32;
+    }
+
+    /* ── Action bar ────────────────────────────────────────────── */
+    .action-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #f0f4f8;
+        padding: 10px 16px;
+        border-radius: 8px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+    }
+
+    .action-bar select {
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 13px;
+        min-width: 200px;
+    }
+
+    .action-bar .btn-go {
+        background: #417690;
+        color: #fff;
+        border: none;
+        padding: 6px 16px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .action-bar .btn-go:hover {
+        background: #2c5364;
+    }
+
+    .btn-sel {
+        background: none;
+        border: 1px solid #ccc;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        cursor: pointer;
+        color: #555;
+    }
+
+    .btn-sel:hover {
+        background: #e8e8e8;
+    }
+
+    .sel-info {
+        font-size: 13px;
+        color: #555;
+    }
+
+    /* ── Gantt timeline ───────────────────────────────────────── */
+    .gantt-wrapper {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .gantt-scroll {
+        display: flex;
+        flex-direction: column;
+        min-width: fit-content;
+    }
+
+    /* Header */
+    .gantt-header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+    }
+
+    .gantt-hdr-room {
+        width: 140px;
+        min-width: 140px;
+        background: #1a2634;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 10px 8px;
+        text-align: center;
+        position: sticky;
+        left: 0;
+        z-index: 11;
+        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .gantt-hdr-hours {
+        display: flex;
+    }
+
+    .gantt-hdr-hour {
+        width: 80px;
+        min-width: 80px;
+        background: #2c3e50;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 10px 0;
+        text-align: center;
+        border-left: 1px solid #3a5068;
+        box-sizing: border-box;
+    }
+
+    /* Room rows */
+    .gantt-row {
+        display: flex;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .gantt-room-label {
+        width: 140px;
+        min-width: 140px;
+        font-weight: 700;
+        font-size: 13px;
+        color: #333;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        position: sticky;
+        left: 0;
+        z-index: 10;
+        border-right: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .gantt-timeline {
+        position: relative;
+        height: 60px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .gantt-gridline {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        border-left: 1px solid #eee;
+    }
+
+    /* ── Showtime block ───────────────────────────────────────── */
+    .st-block {
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        border-radius: 6px;
+        padding: 2px 6px;
+        font-size: 11px;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: box-shadow .15s, border-color .15s;
+        z-index: 1;
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        min-width: 30px;
+    }
+
+    .st-block:hover {
+        z-index: 5;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .st-block.selected {
+        border-color: #2563eb !important;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
+        z-index: 4;
+    }
+
+    .st-block .blk-time {
+        font-weight: 700;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .st-block .blk-movie {
+        font-size: 10px;
+        opacity: 0.85;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .st-block .blk-check {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 14px;
+        height: 14px;
+        background: #2563eb;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+    }
+
+    .st-block.selected .blk-check {
+        display: flex;
+    }
+
+    /* Status colors */
+    .st-block.draft {
+        background: #e5e7eb;
+        color: #374151;
+    }
+
+    .st-block.confirmed {
+        background: #bbf7d0;
+        color: #065f46;
+    }
+
+    .st-block.cancelled {
+        background: #fecaca;
+        color: #991b1b;
+        text-decoration: line-through;
+    }
+
+    /* ── Legend ────────────────────────────────────────────────── */
+    .legend {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        font-size: 12px;
+        color: #555;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .legend-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    /* Messages */
+    .messagelist {
+        margin: 0 0 12px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .messagelist li {
+        padding: 10px 16px;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
+
+    .messagelist .success {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .messagelist .error {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+    .messagelist .warning {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .empty-msg {
+        text-align: center;
+        color: #999;
+        padding: 40px;
+        font-size: 15px;
+    }
+
+    /* ── Quick-add modal ──────────────────────────────────────── */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, .45);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-overlay.open {
+        display: flex;
+    }
+
+    .modal-box {
+        background: #fff;
+        border-radius: 12px;
+        width: 520px;
+        max-width: 94vw;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .2);
+        animation: modalIn .2s ease;
+    }
+
+    @keyframes modalIn {
+        from {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .modal-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .modal-hdr h3 {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .modal-close {
+        background: none;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+        color: #888;
+        line-height: 1;
+    }
+
+    .modal-close:hover {
+        color: #333;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-body .fm-row {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .modal-body .fm-group {
+        flex: 1;
+    }
+
+    .modal-body .fm-group label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 4px;
+    }
+
+    .modal-body .fm-group input,
+    .modal-body .fm-group select {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+    .modal-body .fm-group input:focus,
+    .modal-body .fm-group select:focus {
+        outline: none;
+        border-color: #417690;
+        box-shadow: 0 0 0 2px rgba(65, 118, 144, .15);
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 14px 20px;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .modal-footer .btn-cancel {
+        background: #f3f4f6;
+        color: #333;
+        border: 1px solid #ccc;
+        padding: 8px 18px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .modal-footer .btn-cancel:hover {
+        background: #e5e7eb;
+    }
+
+    .modal-footer .btn-save {
+        background: #1e8e3e;
+        color: #fff;
+        border: none;
+        padding: 8px 22px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .modal-footer .btn-save:hover {
+        background: #167a32;
+    }
+
+    .modal-footer .btn-save:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    .modal-alert {
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 13px;
+        margin-bottom: 12px;
+        display: none;
+    }
+
+    .modal-alert.success {
+        background: #d1fae5;
+        color: #065f46;
+        display: block;
+    }
+
+    .modal-alert.error {
+        background: #fee2e2;
+        color: #991b1b;
+        display: block;
+    }
+</style>
+{% if messages %}
+<ul class="messagelist">
+    {% for message in messages %}
+    <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<!-- Header -->
+<div class="st-header">
+    <h2 style="font-size: 28px; font-weight: 800; margin: 0; color: #1a1a2e;">Showtimes</h2>
+    <div class="st-header-actions">
+        <button type="button" class="btn-sm btn-add" onclick="openAddModal()"
+            style="padding:8px 18px; border-radius:6px; border:none; font-weight:600; cursor:pointer;">
+            ➕ Add Showtime
+        </button>
+        <a href="generate/" class="btn-sm btn-primary"
+            style="text-decoration:none; padding:8px 18px; border-radius:6px;">
+            ⚙️ Generate Showtimes
+        </a>
+    </div>
+</div>
+<!-- Instructions -->
+<div
+    style="background: #f8f9fc; border-left: 4px solid #417690; padding: 12px 16px; margin-bottom: 14px; border-radius: 4px; font-size: 13px; color: #333;">
+    <strong style="display:block; margin-bottom:6px; color:#417690;">📖 How to manage showtimes:</strong>
+    <ul style="margin: 0; padding-left: 20px; color: #555; line-height: 1.5;">
+        <li><strong>Viewing:</strong> Use the date arrows or calendar to jump between days. The timeline visualizes
+            showtimes horizontally across standard working hours.</li>
+        <li><strong>Status:</strong> <span style="background:#e5e7eb; padding:1px 4px; border-radius:2px;">Gray</span> =
+            Draft (hidden), <span
+                style="background:#bbf7d0; padding:1px 4px; border-radius:2px; color:#065f46">Green</span> = Confirmed
+            (live), <span style="background:#fecaca; padding:1px 4px; border-radius:2px; color:#991b1b">Red</span> =
+            Cancelled.</li>
+        <li><strong>Editing:</strong> <b>Double-click</b> any showtime block to edit details. Standard
+            <b>single-click</b> lets you select multiple blocks for bulk actions (bottom bar).
+        </li>
+        <li><strong>Auto Generation:</strong> Click "Generate Showtimes" to automatically let the system schedule
+            drafts.</li>
+        <li><strong>Manual Creation:</strong> Click "Add Showtime" to manually create a showtime.</li>
+    </ul>
+</div>
+
+<!-- Date navigation -->
+<div class="date-nav">
+    <a href="?date={{ prev_date }}{% if filter_status %}&status={{ filter_status }}{% endif %}"
+        title="Previous day">&larr;</a>
+    <span class="date-label">{{ current_date_display }}</span>
+    <a href="?date={{ next_date }}{% if filter_status %}&status={{ filter_status }}{% endif %}"
+        title="Next day">&rarr;</a>
+    <input type="date" id="jumpDate" value="{{ current_date }}" onchange="jumpToDate(this.value)"
+        style="margin-left:8px;">
+</div>
+<!-- Filter + Legend row -->
+<div class="filter-row">
+    <label>Filter by Showtime's status:</label>
+    <select id="filterStatus">
+        <option value="">All</option>
+        <option value="draft" {% if filter_status == "draft" %}selected{% endif %}>Draft</option>
+        <option value="confirmed" {% if filter_status == "confirmed" %}selected{% endif %}>Confirmed</option>
+        <option value="cancelled" {% if filter_status == "cancelled" %}selected{% endif %}>Cancelled</option>
+    </select>
+    <button class="btn-sm btn-primary" onclick="applyFilter()">Apply</button>
+    <span style="flex:1;"></span>
+    <div class="legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#e5e7eb;"></span> Draft</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#bbf7d0;"></span> Confirmed</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#fecaca;"></span> Cancelled</span>
+    </div>
+</div>
+<!-- Gantt timeline -->
+<div class="gantt-wrapper">
+    <div class="gantt-scroll">
+        <div class="gantt-header">
+            <div class="gantt-hdr-room">Room</div>
+            <div class="gantt-hdr-hours">
+                {% for h in hour_labels %}
+                <div class="gantt-hdr-hour">{{ h }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        {% for room in room_timeline %}
+        <div class="gantt-row">
+            <div class="gantt-room-label">{{ room.name }}</div>
+            <div class="gantt-timeline" data-room-idx="{{ forloop.counter0 }}">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% if not room_timeline %}
+<div class="empty-msg">No rooms configured.</div>
+{% endif %}
+<!-- Action bar -->
+<div
+    style="background: #f8f9fc; border-left: 4px solid #417690; padding: 12px 16px; margin-bottom: 14px; border-radius: 4px; font-size: 13px; color: #333;">
+    <strong style="display:block; margin-bottom:6px; color:#417690;">📖 How to use Showtime's Action:</strong>
+    <ul style="margin: 0; padding-left: 20px; color: #555; line-height: 1.5;">
+        <li><strong>Select showtimes:</strong> Single-click blocks on the timeline to select them (a blue checkmark
+            appears). Use "Select All" / "Deselect All" buttons for bulk selection.</li>
+        <li><strong>Choose an action:</strong> Pick an action from the dropdown (e.g., Confirm, Cancel, Delete) then
+            click "Go" to apply it to all selected showtimes.</li>
+        <li><strong>Delete All Drafts:</strong> This special action removes all draft showtimes for the current date —
+            no selection needed.</li>
+    </ul>
+</div>
+<form id="actionForm" method="POST" action="">
+    {% csrf_token %}
+    <div class="action-bar">
+        <label>Showtime's Action:</label>
+        <select name="action" id="actionSelect">
+            {% for value, label in action_choices %}
+            <option value="{{ value }}">{{ label }}</option>
+            {% endfor %}
+        </select>
+        <button type="button" class="btn-go" onclick="submitAction()">Go</button>
+        <button type="button" class="btn-sel" onclick="selectAll()">Select All</button>
+        <button type="button" class="btn-sel" onclick="deselectAll()">Deselect All</button>
+        <span class="sel-info" id="selInfo">0 selected</span>
+    </div>
+    <div id="hiddenChecks" style="display:none;"></div>
+</form>
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- Add Single Showtime Modal                                     -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="addModal">
+    <div class="modal-box">
+        <div class="modal-hdr">
+            <h3>➕ Add Single Showtime</h3>
+            <button class="modal-close" onclick="closeAddModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="modalAlert"></div>
+            <div class="fm-row">
+                <div class="fm-group">
+                    <label>Movie *</label>
+                    <select id="md-movie">
+                        <option value="">— select —</option>
+                        {% for m in add_movies %}
+                        <option value="{{ m.id }}" data-duration="{{ m.duration }}" data-versions="{{ m.version_csv }}">
+                            {{ m.title }} ({{ m.duration }} min)
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="fm-group">
+                    <label>Room *</label>
+                    <select id="md-room">
+                        <option value="">— select movie first —</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fm-row">
+                <div class="fm-group">
+                    <label>Start Time *</label>
+                    <input type="datetime-local" id="md-start">
+                </div>
+                <div class="fm-group">
+                    <label>Version *</label>
+                    <select id="md-version">
+                        <option value="">— select movie first —</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fm-row">
+                <div class="fm-group">
+                    <label>Base Price</label>
+                    <input type="number" id="md-price" value="75000" step="1000" min="0">
+                </div>
+                <div class="fm-group">
+                    <label>Status</label>
+                    <select id="md-status">
+                        <option value="draft">Draft</option>
+                        <option value="confirmed">Confirmed</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeAddModal()">Cancel</button>
+            <button class="btn-save" id="md-save" onclick="saveSingleShowtime()">Create Showtime</button>
+        </div>
+    </div>
+</div>
+<script>
+    /* ── Data from Django context ─────────────────────────────────── */
+    var ROOM_DATA = {{ room_timeline_json|safe }};
+    var HOUR_COLS = {{ timeline_hours }};
+    var COL_WIDTH = 80;
+    var TOTAL_WIDTH = HOUR_COLS * COL_WIDTH;
+    var selectedIds = new Set();
+    var VERSION_LOOKUP = {{ versions_json|safe|default:"[]" }};
+    var MOVIE_ROOM_MAP = {{ movie_room_map_json|safe|default:"{}" }};
+    var ROOM_LOOKUP = {{ room_lookup_json|safe|default:"{}" }};
+    var CSRF_TOKEN = "{{ csrf_token }}";
+    /* ── Draw Gantt ───────────────────────────────────────────────── */
+    (function () {
+        var timelines = document.querySelectorAll(".gantt-timeline");
+        timelines.forEach(function (tl) {
+            var roomIdx = parseInt(tl.dataset.roomIdx);
+            tl.style.width = TOTAL_WIDTH + "px";
+            for (var i = 0; i <= HOUR_COLS; i++) {
+                var line = document.createElement("div");
+                line.className = "gantt-gridline";
+                line.style.left = (i * COL_WIDTH) + "px";
+                if (i < HOUR_COLS && i % 2 === 1) {
+                    line.style.width = COL_WIDTH + "px";
+                    line.style.background = "rgba(0,0,0,0.015)";
+                    line.style.borderLeft = "1px solid #eee";
+                }
+                tl.appendChild(line);
+            }
+            var room = ROOM_DATA[roomIdx];
+            if (!room) return;
+            room.showtimes.forEach(function (st) {
+                var left = (st.offset_min / 60) * COL_WIDTH;
+                var width = (st.duration / 60) * COL_WIDTH;
+                if (left < 0) { width += left; left = 0; }
+                if (width < 30) width = 30;
+                if (left + width > TOTAL_WIDTH) width = TOTAL_WIDTH - left;
+                var block = document.createElement("div");
+                block.className = "st-block " + st.status;
+                block.dataset.id = st.id;
+                block.title = st.movie + " — " + st.time + " (" + st.duration + "min) — " + st.status;
+                block.style.left = left + "px";
+                block.style.width = width + "px";
+                block.innerHTML =
+                    '<span class="blk-check">&#10003;</span>' +
+                    '<span class="blk-time">' + st.time + ' ~ ' + st.end_time + '</span>' +
+                    '<span class="blk-movie">' + st.movie + '</span>';
+                block.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    toggleBlock(this);
+                });
+                block.addEventListener("dblclick", function (e) {
+                    e.stopPropagation();
+                    window.location.href = st.id + "/change/";
+                });
+                tl.appendChild(block);
+            });
+        });
+    })();
+    /* ── Selection ────────────────────────────────────────────────── */
+    function toggleBlock(el) {
+        var id = el.dataset.id;
+        if (selectedIds.has(id)) { selectedIds.delete(id); el.classList.remove("selected"); }
+        else { selectedIds.add(id); el.classList.add("selected"); }
+        updateInfo();
+    }
+    function selectAll() {
+        document.querySelectorAll(".st-block").forEach(function (el) {
+            selectedIds.add(el.dataset.id); el.classList.add("selected");
+        });
+        updateInfo();
+    }
+    function deselectAll() {
+        document.querySelectorAll(".st-block").forEach(function (el) {
+            selectedIds.delete(el.dataset.id); el.classList.remove("selected");
+        });
+        updateInfo();
+    }
+    function updateInfo() {
+        document.getElementById("selInfo").textContent = selectedIds.size + " selected";
+    }
+    /* ── Actions ──────────────────────────────────────────────────── */
+    function submitAction() {
+        var action = document.getElementById("actionSelect").value;
+        if (!action) { alert("Please select an action."); return; }
+        if (action !== "delete_all_drafts" && selectedIds.size === 0) {
+            alert("Please select at least one showtime."); return;
+        }
+        if (!confirm("Are you sure?")) return;
+        var container = document.getElementById("hiddenChecks");
+        container.innerHTML = "";
+        if (action === "delete_all_drafts") {
+            addHidden(container, "_selected_action", "0");
+        } else {
+            selectedIds.forEach(function (id) {
+                addHidden(container, "_selected_action", id);
+            });
+        }
+        document.getElementById("actionForm").submit();
+    }
+    function addHidden(parent, name, value) {
+        var inp = document.createElement("input");
+        inp.type = "hidden"; inp.name = name; inp.value = value;
+        parent.appendChild(inp);
+    }
+    /* ── Filters / Navigation ─────────────────────────────────────── */
+    function jumpToDate(d) {
+        var params = new URLSearchParams(window.location.search);
+        params.set("date", d);
+        window.location.search = params.toString();
+    }
+    function applyFilter() {
+        var s = document.getElementById("filterStatus").value;
+        var params = new URLSearchParams(window.location.search);
+        if (s) params.set("status", s); else params.delete("status");
+        window.location.search = params.toString();
+    }
+    /* ══════════════════════════════════════════════════════════════════
+      Add Single Showtime — Modal logic
+      ══════════════════════════════════════════════════════════════════ */
+    function openAddModal() {
+        // Pre-fill date from current timeline view
+        var curDate = "{{ current_date }}";
+        var startInput = document.getElementById("md-start");
+        if (!startInput.value && curDate) {
+            startInput.value = curDate + "T10:00";
+        }
+        document.getElementById("addModal").classList.add("open");
+    }
+    function closeAddModal() {
+        document.getElementById("addModal").classList.remove("open");
+        document.getElementById("modalAlert").innerHTML = "";
+        document.getElementById("modalAlert").className = "modal-alert";
+    }
+    /* Populate room + version dropdowns when movie changes */
+    document.getElementById("md-movie").addEventListener("change", function () {
+        var movieId = this.value;
+        var opt = this.options[this.selectedIndex];
+        // ── Filter rooms ──
+        var roomSel = document.getElementById("md-room");
+        roomSel.innerHTML = '<option value="">— select room —</option>';
+        if (movieId && MOVIE_ROOM_MAP[movieId]) {
+            MOVIE_ROOM_MAP[movieId].forEach(function (rid) {
+                var r = ROOM_LOOKUP[String(rid)];
+                if (r) {
+                    var o = document.createElement("option");
+                    o.value = r.id;
+                    o.textContent = r.name + " (" + r.room_type + ")";
+                    roomSel.appendChild(o);
+                }
+            });
+            if (roomSel.options.length === 2) roomSel.selectedIndex = 1;
+        }
+        // ── Filter versions ──
+        var verSel = document.getElementById("md-version");
+        verSel.innerHTML = '<option value="">— select version —</option>';
+        if (!opt || !opt.value) return;
+        var names = (opt.dataset.versions || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+        names.forEach(function (name) {
+            var vo = VERSION_LOOKUP.find(function (v) { return v.name === name; });
+            if (vo) {
+                var o = document.createElement("option");
+                o.value = vo.id;
+                o.textContent = name;
+                verSel.appendChild(o);
+            }
+        });
+        if (verSel.options.length === 2) verSel.selectedIndex = 1;
+    });
+    /* Save single showtime via API */
+    async function saveSingleShowtime() {
+        var alertEl = document.getElementById("modalAlert");
+        alertEl.className = "modal-alert";
+        alertEl.innerHTML = "";
+        var movieId = document.getElementById("md-movie").value;
+        var roomId = document.getElementById("md-room").value;
+        var startTime = document.getElementById("md-start").value;
+        var versionId = document.getElementById("md-version").value;
+        var basePrice = document.getElementById("md-price").value;
+        var status = document.getElementById("md-status").value;
+        if (!movieId || !roomId || !startTime || !versionId) {
+            alertEl.className = "modal-alert error";
+            alertEl.textContent = "Please fill all required fields (movie, room, start time, version).";
+            return;
+        }
+        if (new Date(startTime) < new Date()) {
+            alertEl.className = "modal-alert error";
+            alertEl.textContent = "Start time cannot be in the past.";
+            return;
+        }
+        var saveBtn = document.getElementById("md-save");
+        saveBtn.disabled = true;
+        saveBtn.textContent = "Creating…";
+        try {
+            var resp = await fetch("/api/cinemas/showtimes/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": CSRF_TOKEN,
+                },
+                body: JSON.stringify({
+                    movie_id: parseInt(movieId),
+                    cinema_room: parseInt(roomId),
+                    start_time: new Date(startTime).toISOString(),
+                    version_id: parseInt(versionId),
+                    base_price: basePrice,
+                    status: status,
+                }),
+            });
+            var data = await resp.json();
+            if (!resp.ok) {
+                var msg = typeof data === "object"
+                    ? Object.entries(data).map(function (e) { return e[0] + ": " + (Array.isArray(e[1]) ? e[1].join(", ") : e[1]); }).join("; ")
+                    : JSON.stringify(data);
+                alertEl.className = "modal-alert error";
+                alertEl.textContent = msg;
+                return;
+            }
+            alertEl.className = "modal-alert success";
+            alertEl.textContent = "Showtime #" + data.id + " created! Reloading…";
+            setTimeout(function () { location.reload(); }, 1200);
+        } catch (e) {
+            alertEl.className = "modal-alert error";
+            alertEl.textContent = "Network error: " + e.message;
+        } finally {
+            saveBtn.disabled = false;
+            saveBtn.textContent = "Create Showtime";
+        }
+    }
+    /* Close modal on Escape key */
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeAddModal();
+    });
+    /* Close modal on backdrop click */
+    document.getElementById("addModal").addEventListener("click", function (e) {
+        if (e.target === this) closeAddModal();
+    });
+</script>
+{% endblock %}

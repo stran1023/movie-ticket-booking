@@ -1,0 +1,252 @@
+[
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 212,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00212"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 164,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00164"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 105,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00105"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 107,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00107"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 109,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00109"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 179,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00179"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 115,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00115"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 104,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00104"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 113,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00113"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 102,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00102"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 112,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00112"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 101,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00101"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 108,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00108"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 111,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00111"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 103,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00103"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 106,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00106"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 110,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00110"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 114,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00114"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 168,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00168"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 175,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00175"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 193,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00193"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 198,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00198"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 3,
+      "booking_id": 146,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00146"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 2,
+      "booking_id": 196,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00196"
+    }
+  },
+  {
+    "model": "users.pointhistory",
+    "fields": {
+      "user_profile_id": 1,
+      "booking_id": 195,
+      "point_type": "ACCUMULATE",
+      "points_amount": 100,
+      "description": "Points accumulated from booking_id BK00195"
+    }
+  }
+]

@@ -1,0 +1,149 @@
+<!-- templates/admin/pdf_report_with_charts.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CineBook Analytics Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+            @top-center {
+                content: "CineBook Analytics Report";
+                font-family: Arial, sans-serif;
+                font-size: 9pt;
+                color: #666;
+            }
+            @bottom-center {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: Arial, sans-serif;
+                font-size: 9pt;
+                color: #666;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2575fc;
+            margin: 0;
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .kpi-card {
+            background: #f8f9fa;
+            border-left: 4px solid #2575fc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .kpi-card h3 {
+            margin: 0 0 5px 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .kpi-card .value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2575fc;
+        }
+        .chart-section {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        .chart-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .chart-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎬 CineBook Analytics Report</h1>
+        <p>Period: {{ date_range.start }} to {{ date_range.end }}</p>
+        <p>Generated: {{ generated_at }}</p>
+    </div>
+    
+    <!-- KPIs -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <h3>Total Users</h3>
+            <div class="value">{{ kpis.users|floatformat:0 }}</div>
+        </div>
+        <div class="kpi-card">
+            <h3>Total Movies</h3>
+            <div class="value">{{ kpis.movies|floatformat:0 }}</div>
+        </div>
+        <div class="kpi-card">
+            <h3>Total Bookings</h3>
+            <div class="value">{{ kpis.bookings|floatformat:0 }}</div>
+        </div>
+        <div class="kpi-card">
+            <h3>Total Revenue</h3>
+            {% load humanize %}
+            <div class="value">{{ kpis.revenue|floatformat:0|intcomma }} VND</div>
+        </div>
+    </div>
+    
+    <!-- Charts -->
+    {% if charts.bookings %}
+    <div class="chart-section">
+        <div class="chart-title">📊 Bookings Trend</div>
+        <img src="{{ charts.bookings }}" class="chart-image" alt="Bookings Chart">
+    </div>
+    {% endif %}
+    
+    {% if charts.revenue %}
+    <div class="chart-section">
+        <div class="chart-title">💰 Revenue Trend</div>
+        <img src="{{ charts.revenue }}" class="chart-image" alt="Revenue Chart">
+    </div>
+    {% endif %}
+    
+    {% if charts.movies %}
+    <div class="chart-section">
+        <div class="chart-title">🎥 Top Movies</div>
+        <img src="{{ charts.movies }}" class="chart-image" alt="Top Movies Chart">
+    </div>
+    {% endif %}
+    
+    {% if charts.time %}
+    <div class="chart-section">
+        <div class="chart-title">⏰ Ticket Time Distribution</div>
+        <img src="{{ charts.time }}" class="chart-image" alt="Time Range Chart">
+    </div>
+    {% endif %}
+    
+    <div class="footer">
+        <p>This report was generated automatically by CineBook Analytics System</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* =====================================================
+GLOBAL NAVBAR
+===================================================== */
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,.06);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-toggle {
+    margin-right: 20px;
+    color: #343a40 !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Hide top admin user menu */
+.navbar-nav .user-menu {
+    display: none !important;
+}
+
+.navbar .nav-link{
+    color: #374151;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: all 0.25s ease;
+}
+
+.navbar .nav-link:hover{
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+/* =====================================================
+BRAND / LOGO
+===================================================== */
+
+.brand-link {
+    text-align: center;
+    padding-left: 0;
+}
+
+.brand-link .brand-image {
+    display: none;
+}
+
+.brand-link .brand-text {
+    margin-left: 0;
+}
+
+
+/* =====================================================
+BREADCRUMB CLEANUP
+===================================================== */
+
+.breadcrumb {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+SIDEBAR
+===================================================== */
+
+/* Hide user panel */
+.main-sidebar .user-panel {
+    display: none;
+}
+
+/* Remove first nav header */
+.nav-sidebar .nav-header:first-child {
+    display: none;
+}
+
+.nav-sidebar .nav-header:first-child { display: none !important; }
+
+aside.main-sidebar .sidebar .user-panel,
+aside.main-sidebar .sidebar [class*="user-panel"],
+.main-sidebar .user-panel,
+.sidebar .user-panel,
+.sidebar [class*="user-panel"],
+.user-panel.mt-3,
+.user-panel.pb-3,
+.user-panel.mb-3,
+.user-panel.d-flex,
+aside.main-sidebar .user-panel .image,
+aside.main-sidebar .user-panel .info,
+.sidebar .user-panel .image,
+.sidebar .user-panel .info {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+}
+
+/* =====================================================
+SIDEBAR SECTION HEADERS
+===================================================== */
+
+.nav-sidebar .nav-header {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 10px 18px 6px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+
+/* =====================================================
+SUBMENU ITEMS
+===================================================== */
+
+.sidebar-brand {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Georgia", "Times New Roman", serif;
+
+    color: #111827;
+    letter-spacing: 0.5px;
+
+    position: relative;
+
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+/* subtle film line */
+.sidebar-brand::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #111827,
+        transparent
+    );
+
+    transition: width 0.5s ease;
+}
+
+/* cinematic glow sweep */
+.sidebar-brand::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4),
+        transparent 70%
+    );
+
+    transition: left 0.6s ease;
+}
+
+/* hover effect */
+.sidebar-brand:hover {
+    color: #000;
+    transform: translateY(-1px);
+    letter-spacing: 1px;
+}
+
+.sidebar-brand:hover::after {
+    width: 100%;
+}
+
+.sidebar-brand:hover::before {
+    left: 100%;
+}
+
+.sidebar-wrapper .nav-item {
+    font-size: medium;
+    margin-bottom: 10px
+}
+
+.sidebar-wrapper .sidebar-menu > .nav-item > .nav-treeview{
+    background-color: #262626;
+    border-radius: 6px;
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link {
+    background: transparent;
+    color: #e5e7eb;
+    padding-left: 2.25rem;
+    border-radius: 6px;
+    transition: background .2s ease, color .2s ease;
+}
+
+/* icons */
+.nav-sidebar .nav-treeview .nav-icon {
+    color: #cbd5e1;
+}
+
+/* hover */
+.nav-sidebar .nav-treeview > .nav-item > .nav-link:hover {
+    background: #2b3442;
+    color: #fff;
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link:hover .nav-icon {
+    color: #fff;
+}
+
+/* active page */
+.nav-sidebar .nav-treeview > .nav-item > .nav-link.active {
+    background: #2563eb;
+    color: #fff;
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link.active .nav-icon {
+    color: #fff;
+}
+
+#content-related #recent-actions-module .timeline .bg-success{
+    background-color: #fff !important;
+}
+
+#content-related #recent-actions-module .timeline .bg-danger{
+    background-color: #fff !important;
+}
+
+.card-header{
+    background-color: #c4b578;
+}
+

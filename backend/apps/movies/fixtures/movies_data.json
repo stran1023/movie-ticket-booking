@@ -1,0 +1,1172 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.088Z",
+        "is_deleted": false,
+        "title": "THỎ ƠI!!",
+        "search_title": "tho oi!!",
+        "description": "Phim “Thỏ ơi!!” dự kiến công chiếu trong dịp Tết 2026, thuộc thể loại hài, tâm lý sở trường của Trấn Thành, mang màu sắc trẻ trung với dàn diễn viên mới, tiếp nối tinh thần đem đến cho khán giả những điều vui vẻ, hài hước vào dịp Tết Nguyên đán.",
+        "poster_file": "tho-oi!!",
+        "trailer_url": "https://www.youtube.com/embed/3pzgEbvS9ag?rel=0&showinfo=0",
+        "duration": 127,
+        "directors": "Trấn Thành",
+        "casts": "Pháo, Lyly, Trấn Thành, Pháp Kiều, Gil Lê, Cris Phan, Ali Hoàng Dương, BB Trần, Đinh Ngọc Diệp",
+        "genres": "Tâm Lý",
+        "languages_subtitles": "Tiếng Việt - Phụ đề Tiếng Anh",
+        "release_date": "2026-02-14",
+        "end_date": "2026-03-14",
+        "status": "ENDED",
+        "label": "T18",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 2,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.092Z",
+        "is_deleted": false,
+        "title": "ĐỒI GIÓ HÚ",
+        "search_title": "doi gio hu",
+        "description": "Một chuyện tình say đắm và đầy giông bão, diễn ra giữa khung cảnh hoang dã của vùng đồng hoang Yorkshire, khắc họa mối quan hệ mãnh liệt nhưng đầy hủy diệt giữa Heathcliff và Catherine Earnshaw.",
+        "poster_file": "doi-gio-hu",
+        "trailer_url": "https://www.youtube.com/embed/G4cxnFEageg?rel=0&showinfo=0",
+        "duration": 136,
+        "directors": "Emerald Fennell",
+        "casts": "Margot Robbie, Jacob Elordi, Hong Chau, Shazad Latif, Alison Oliver, Martin Clunes, Ewan Mitchell,...",
+        "genres": "Tâm Lý, Tình cảm",
+        "languages_subtitles": "Tiếng Anh – Phụ đề Tiếng Việt",
+        "release_date": "2026-02-14",
+        "end_date": "2026-03-14",
+        "status": "ENDED",
+        "label": "T18",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 3,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.095Z",
+        "is_deleted": false,
+        "title": "NHÀ BA TÔI MỘT PHÒNG",
+        "search_title": "nha ba toi mot phong",
+        "description": "Lấy bối cảnh một khu chung cư cũ với căn nhà chỉ vỏn vẹn một phòng, Nhà Ba Tôi Một Phòng khắc họa mối quan hệ “lệch pha” giữa người cha bảo thủ và cô con gái Gen Z đầy mơ ước. Khi những khác biệt thế hệ va chạm trong không gian chật chội, tình thân dần được thử thách và hàn gắn. Bộ phim mang đến một lát cắt gần gũi về gia đình Việt hiện đại, nơi yêu thương đôi khi bắt đầu từ sự thấu hiểu.",
+        "poster_file": "nha-ba-toi-mot-phong",
+        "trailer_url": "https://www.youtube.com/embed/gCmV2d_82CU?rel=0&showinfo=0",
+        "duration": 126,
+        "directors": "Trường Giang",
+        "casts": "Trường Giang, Đoàn Minh Anh, Anh Tú Atus, Lê Khánh,…",
+        "genres": "Gia đình, Hài, Tâm Lý",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-15",
+        "end_date": "2026-04-15",
+        "status": "NOW_SHOWING",
+        "label": "K",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 4,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.096Z",
+        "is_deleted": false,
+        "title": "BÁU VẬT TRỜI CHO",
+        "search_title": "bau vat troi cho",
+        "description": "BÁU VẬT TRỜI CHO - bộ phim đa sắc cảm xúc, rực rỡ yêu thương, gắn kết gia đình Tết 2026. Ngọc (Phương Anh Đào) là mẹ đơn thân, có con nhờ thụ tinh nhân tạo từ tinh trùng hiến tặng. Trong chuyến đi biển để đổi gió và trốn chạy quá khứ, cô & Tô chạm mặt Hồng (Tuấn Trần) – chàng trai làng chài phóng khoáng, cũng chính là người góp phần tạo nên sự ra đời của Tô. Cuộc gặp gỡ tréo ngoe ấy kéo ba con người xa lạ vào hàng loạt tình huống dở khóc dở cười lẫn căng thẳng, khi mọi thứ bắt đầu vượt ngoài kế hoạch. Liệu người cha “trời cho” này là món quà bất ngờ của số phận, hay chỉ là một “trò chơi” oái oăm cuộc đời?",
+        "poster_file": "bau-vat-troi-cho",
+        "trailer_url": "https://www.youtube.com/embed/dwfUi9SV5ss?rel=0&showinfo=0",
+        "duration": 124,
+        "directors": "Lê Thanh Sơn",
+        "casts": "NSND Kim Xuân, Tuấn Trần, Phương Anh Đào, Võ Tấn Phát, Hưng Nguyễn, La Thành, Trung Dân, Khương Lê, Tạ Lâm, Quách Ngọc Ngoan, Chị Phiến, Thư Đan…",
+        "genres": "Gia đình, Hài, Tình cảm",
+        "languages_subtitles": "Tiếng Việt - Phụ đề tiếng Anh",
+        "release_date": "2026-03-15",
+        "end_date": "2026-04-15",
+        "status": "NOW_SHOWING",
+        "label": "K",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 5,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.097Z",
+        "is_deleted": false,
+        "title": "MÙI PHỞ",
+        "search_title": "mui pho",
+        "description": "Câu chuyện về sự xung đột thế hệ và những va chạm giữa quan niệm cũ và lối sống hiện đại, xoay quanh món Phở - biểu tượng ẩm thực Việt. Đằng sau những mâu thuẫn và tranh cãi ấy, từng bí mật dần được hé lộ, mở ra hành trình tìm lại sự ấm áp của tình thân qua những tình tiết hài hước, dí dỏm và đầy duyên dáng.",
+        "poster_file": "mui-pho",
+        "trailer_url": "https://www.youtube.com/embed/7L5qkIkkcY8?rel=0&showinfo=0",
+        "duration": 111,
+        "directors": "Minh Beta",
+        "casts": "Xuan Hinh - Thu Trang - Thanh Thanh Hien - Quoc Tuan - Bao Nam - Ha Huong - Thanh Huong - Chu Manh Cuong - Tien Loc",
+        "genres": "Gia đình, Hài",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-15",
+        "end_date": "2026-04-15",
+        "status": "NOW_SHOWING",
+        "label": "K",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 6,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.100Z",
+        "is_deleted": false,
+        "title": "THANH GƯƠM DIỆT QUỶ: VÔ HẠN THÀNH",
+        "search_title": "thanh guom diet quy: vo han thanh",
+        "description": "Bộ phim đầu tiên trong bộ ba phim Thanh Gươm Diệt Quỷ: Vô Hạn Thành. Đây là phần bắt đầu cho trận chiến cuối cùng giữa Sát Quỷ Đoàn cùng Muzan và bè lũ quỷ tại Vô Hạn Thành. Bộ phim quy tụ gần như toàn bộ Trụ Cột & các nhân vật chính đối đầu nhóm Thượng Huyền mạnh nhất của Muzan; cùng bối cảnh Vô Hạn Thành phức tạp, kiến trúc đảo lộn và di chuyển liên tục hứa hẹn mang đến những trận chiến đấu đầy mãn nhãn.",
+        "poster_file": "thanh-guom-diet-quy-vo-han-thanh",
+        "trailer_url": "https://www.youtube.com/embed/BSkUboiyeCo?rel=0&showinfo=0",
+        "duration": 155,
+        "directors": "Haruo Sotozaki",
+        "casts": "Natsuki Hanae, Saori Hayami, Yoshitsugu Matsuoka",
+        "genres": "Hành Động, Hoạt Hình",
+        "languages_subtitles": "Tiếng Nhật - Phụ đề Tiếng Việt & Tiếng Anh",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "T16",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 7,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.100Z",
+        "is_deleted": false,
+        "title": "BIỆT ĐỘI THÚ CƯNG: CUỘC CHIẾN TRÊN ĐƯỜNG RAY",
+        "search_title": "biet doi thu cung: cuoc chien tren duong ray",
+        "description": "Khi chuyến tàu bỗng biến thành cuộc rượt đuổi nghẹt thở, nhóm thú cưng phải hợp sức để phá tan âm mưu của Hans – chú lửng xấu tính đang nung nấu trả thù. Và rồi Falcon xuất hiện, chú gấu mèo thông minh, lanh lợi và sẵn sàng liều mình để cứu tất cả.",
+        "poster_file": "biet-doi-thu-cung-cuoc-chien-tren-duong-ray",
+        "trailer_url": "https://www.youtube.com/embed/5FX5H9j1GT4?rel=0&showinfo=0",
+        "duration": 87,
+        "directors": "Benoît Daffis & Jean-Christian Tassy",
+        "casts": "",
+        "genres": "Hài, Hành Động, Hoạt Hình",
+        "languages_subtitles": "Lồng tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 8,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.101Z",
+        "is_deleted": false,
+        "title": "THỎ GÀ DU XUÂN ĐẠI NÁO ĐỊA ĐẠO",
+        "search_title": "tho ga du xuan dai nao dia dao",
+        "description": "Theo truyền thuyết, sâu trong một ngọn núi bí mật tồn tại một chú marmot thần bí sở hữu năng lực xoay ngược thời gian. Khi Chickenhare phát hiện tạo vật huyền thoại này có thể là hy vọng duy nhất để cứu lấy giống loài của mình, cậu không ngần ngại dấn thân vào hành trình đầy hiểm nguy để tìm kiếm sức mạnh cổ xưa ấy. Thế nhưng con đường phía trước chẳng hề dễ dàng. Bởi dường như Chickenhare và các người bạn của cậu không phải là những kẻ duy nhất truy tìm bí mật của chú marmot quyền năng này.",
+        "poster_file": "tho-ga-du-xuan-dai-nao-dia-dao",
+        "trailer_url": "https://www.youtube.com/embed/VpG5D-hWKY4?rel=0&showinfo=0",
+        "duration": 89,
+        "directors": "Benjamin Mousquet",
+        "casts": "Laila Berzins, Bernardo De Paula, Joe Ochman, etc.",
+        "genres": "Hoạt Hình, Phiêu Lưu",
+        "languages_subtitles": "Phụ đề Tiếng Việt & Lồng Tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 9,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.106Z",
+        "is_deleted": false,
+        "title": "TUYỂN THỦ DÊ - “MÙI” VỊ CHIẾN THẮNG",
+        "search_title": "tuyen thu de - “mui” vi chien thang",
+        "description": "Từ Sony Pictures Animation – studio đứng sau bộ phim “Spider-Man: Across the Spider-Verse” – giới thiệu GOAT, một bộ phim hành động hài diễn ra trong thế giới động vật. Câu chuyện xoay quanh Will, một chú dê nhỏ bé với những ước mơ lớn, người có cơ hội ngàn năm có một để gia nhập giải đấu chuyên nghiệp roarball – một môn thể thao đồng đội, đối kháng, cường độ cao, nơi những loài vật nhanh nhẹn và hung hãn nhất thống trị. Các đồng đội của Will không mấy hào hứng khi có một chú dê nhỏ trong đội hình, nhưng Will quyết tâm thay đổi cả môn thể thao này và chứng minh một lần và mãi mãi rằng: “Nhỏ mà có võ!”",
+        "poster_file": "tuyen-thu-de-mui-vi-chien-thang",
+        "trailer_url": "https://www.youtube.com/embed/g_HgMEwcgNU?rel=0&showinfo=0",
+        "duration": 100,
+        "directors": "Tyree Dillihay",
+        "casts": "Caleb McLaughlin, Gabrielle Union, Stephen Curry, Nicola Coughlan, Nick Kroll, David Harbour, Patton Oswalt, Jenifer Lewis",
+        "genres": "Hài, Hành Động, Hoạt Hình",
+        "languages_subtitles": "Tiếng Anh với phụ đề tiếng Việt; Lồng tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 10,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.107Z",
+        "is_deleted": false,
+        "title": "PHI VỤ ĐỘNG TRỜI 2",
+        "search_title": "phi vu dong troi 2",
+        "description": "ZOOTOPIA 2 trở lại sau 9 năm Đu OTP Nick & Judy chuẩn bị 28.11.2025 này ra rạp nhé",
+        "poster_file": "phi-vu-dong-troi-2",
+        "trailer_url": "https://www.youtube.com/embed/YGITWOibh10?rel=0&showinfo=0",
+        "duration": 107,
+        "directors": "Jared Bush, Byron Howard",
+        "casts": "Jason Bateman, Quinta Brunson, Fortune Feimster",
+        "genres": "Gia đình, Hành Động, Phiêu Lưu, Thần thoại",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt; Lồng tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 11,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.108Z",
+        "is_deleted": false,
+        "title": "AVATAR 3: LỬA VÀ TRO TÀN",
+        "search_title": "avatar 3: lua va tro tan",
+        "description": "Avatar: Lửa Và Tro Tàn lấy bối cảnh một năm sau khi gia đình Sully định cư tại bộ tộc Metkayina. Jake (Sam Worthington) và Neytiri (Zoe Saldaña) cùng các thành viên đang phải vật lộn với nỗi đau sau cái chết của Neteyam (Jamie Flatters). Tuy nhiên, thời gian đau buồn không kéo dài lâu khi Đại tá Quaritch (Stephen Lang) vẫn sống sót và chuẩn bị một cuộc tấn công quy mô lớn khác. Mối thù cá nhân giờ đây bùng nổ thành cuộc chiến định đoạt vận mệnh cả hành tinh, khi Quaritch liên minh với Tộc Tro (Mangkwan) - bộ tộc Na'vi hung hãn đại diện cho mặt tối của Pandora dưới sự dẫn dắt của nữ thủ lĩnh Varang đầy thù hận.",
+        "poster_file": "avatar-3-lua-va-tro-tan",
+        "trailer_url": "https://www.youtube.com/embed/rZXmSgjxpdQ?rel=0&showinfo=0",
+        "duration": 197,
+        "directors": "James Cameron",
+        "casts": "Giovanni Ribisi, Kate Winslet, Zoe Saldaña.",
+        "genres": "Hành Động, Khoa Học Viễn Tưởng, Phiêu Lưu, Thần thoại",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "T13",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 12,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.110Z",
+        "is_deleted": false,
+        "title": "KUMANTHONG ĐÀI LOAN: OÁN THAI ĐÒI MẸ",
+        "search_title": "kumanthong dai loan: oan thai doi me",
+        "description": "Hsu-Chuan, nhân viên một công ty game VR, vô tình mang về nhà một con búp bê đất sét vỡ từ ngôi nhà ma ám nơi anh đang lấy tư liệu cho tựa game kinh dị mới. Nhưng anh không ngờ rằng vợ mình — Muhua, chuyên viên phục chế hiện vật đang mang thai — lại bị cuốn hút một cách bất thường bởi con búp bê và ám ảnh phục hồi nó từng chút một. Từ đó, những hiện tượng rùng rợn liên tiếp ập đến, sức khỏe của Muhua ngày càng suy kiệt như bị điều gì đó hút cạn. Tuyệt vọng và hoang mang, Hsu-Chuan tìm đến pháp sư trừ tà Ah-Sheng để cầu cứu. Và rồi, những bí mật ghê rợn ẩn trong con búp bê — cùng lời nguyền cấm kỵ vang lên từ bài đồng dao — bắt đầu trỗi dậy.",
+        "poster_file": "kumanthong-dai-loan-oan-thai-doi-me",
+        "trailer_url": "https://www.youtube.com/embed/5iSxwkWXUbE?rel=0&showinfo=0",
+        "duration": 109,
+        "directors": "Shieh Meng Ju",
+        "casts": "Yo Yang, Cecilia Choi",
+        "genres": "Kinh Dị",
+        "languages_subtitles": "Tiếng Trung Quốc - Phụ đề Tiếng Việt & Tiếng Anh",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "T18",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 13,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.111Z",
+        "is_deleted": false,
+        "title": "TIỂU YÊU QUÁI NÚI LÃNG LÃNG",
+        "search_title": "tieu yeu quai nui lang lang",
+        "description": "Giữa thế đạo mà \"kẻ mạnh làm vua\", một nhóm tiểu yêu quái vô danh và tầm thường gồm Heo, Ếch, Chồn và Khỉ Đột vốn chỉ quen bị bắt nạt và xua đuổi, đã quyết tâm hợp lực thay đổi số phận. Chúng quyết định thực hiện một phen đánh cược điên rồ khi giả danh đoàn thỉnh kinh, vượt vạn dặm tới Tây Thiên để cầu xin Phật Tổ sự bất tử và vang danh. Hành trình hài hước và đầy tính nhân văn đã chinh phục trái tim người xem, đưa “Tiểu yêu quái núi Lãng Lãng” trở thành tác phẩm phim hoạt hình 2D đạt doanh thu cao nhất Trung Quốc mọi thời đại.",
+        "poster_file": "tieu-yeu-quai-nui-lang-lang",
+        "trailer_url": "https://www.youtube.com/embed/D6vLPsyMSUY?rel=0&showinfo=0",
+        "duration": 118,
+        "directors": "Shui Yu",
+        "casts": "Ziping Chen,Yang Lu,Wenliang Dong",
+        "genres": "Hoạt Hình",
+        "languages_subtitles": "Tiếng Trung Quốc - Phụ đề Tiếng Việt; Lồng tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 14,
+    "fields": {
+        "created_at": "2026-02-26T09:15:18Z",
+        "updated_at": "2026-03-16T07:19:41.112Z",
+        "is_deleted": false,
+        "title": "TẦM TẦN KÝ",
+        "search_title": "tam tan ky",
+        "description": "“TẦM TẦN KÝ” là phim điện ảnh kể về câu chuyện của hơn 20 năm sau, kể từ tập cuối bộ phim truyền hình mang tên Cỗ Máy Thời Gian (tựa phim ở Việt Nam). Sau khi Tần Thuỷ Hoàng đã thống nhất 6 nước, màn tái ngộ sau nhiều thập kỷ và cuộc xuyên không đi vào lịch sử hứa hẹn sẽ tạo nên cơn địa chấn tại rạp Việt. Một án oan từ nhiều năm trước đã châm ngòi cho cuộc khủng hoảng làm thay đổi vận mệnh lịch sử! Ken (do Miêu Kiều Vĩ thủ vai) thề sẽ xuyên không trở về thời nhà Tần để xưng vương, bù đắp cho cuộc đời đã bị cướp mất vì oan ngục. Ở thời Tần, gia đình Hạng Thiếu Long (do Cổ Thiên Lạc thủ vai) tuy đã lui về ẩn cư, nhưng mọi hành động vẫn không thể qua mắt đồ đệ của mình – Tần Vương (do Lâm Phong thủ vai). Đúng lúc Tần Vương tưởng rằng mình đã thống nhất lục quốc, xưng bá thiên hạ, thì bất ngờ đối mặt với cuộc tập kích của Ken. Bất đắc dĩ, Tần Vương phải đi tìm vị sư phụ mà mình vừa kính trọng vừa e sợ là Hạng Thiếu Long để xin cứu viện. Sau hơn hai mươi năm xa cách, thầy trò cuối cùng cũng gặp lại. Sự xuất hiện của Ken khiến vận mệnh của ba người bị trói chặt vào nhau, sóng gió lại nổi lên nơi triều Tần, và những ân oán chồng chất cuối cùng cũng phải đi đến hồi kết.",
+        "poster_file": "tam-tan-ky",
+        "trailer_url": "https://www.youtube.com/embed/t8kz4yxsmQ4?rel=0&showinfo=0",
+        "duration": 107,
+        "directors": "Yuen Fai Ng",
+        "casts": "Louis Koo, Raymond Lam, Jessica Hsuan, Sonija Kwok, Joyce Tang, Bai Baihe",
+        "genres": "Hành Động",
+        "languages_subtitles": "Tiếng Quảng Đông - Phụ đề tiếng Việt",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "T13",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 15,
+    "fields": {
+        "created_at": "2026-02-26T09:15:34Z",
+        "updated_at": "2026-03-16T07:19:41.113Z",
+        "is_deleted": false,
+        "title": "NHÀ MÌNH ĐI THÔI",
+        "search_title": "nha minh di thoi",
+        "description": "Phương - chủ Startup trẻ đầy tham vọng, buộc phải thực hiện một chuyến du lịch tuyệt hảo giả tạo cho gia đình bất ổn của mình, để giành lấy khoản đầu tư cho dự án khởi nghiệp. Liệu cô có thể chinh phục thử thách, hàn gắn tình cảm gia đình và nắm bắt cơ hội thành công?",
+        "poster_file": "nha-minh-di-thoi",
+        "trailer_url": "https://www.youtube.com/embed/J68ecT0oE-c?rel=0&showinfo=0",
+        "duration": 115,
+        "directors": "Trần Đình Hiền",
+        "casts": "Uyển Ân, Đoàn Thế Vinh, Michelle Lai, NSND Hồng Vân, NSND Kim Xuân, NS Hoàng Sơn, NSƯT Hữu Châu, NSƯT Ngọc Quỳnh,…",
+        "genres": "Gia đình, Hài",
+        "languages_subtitles": "Tiếng Việt và phụ đề tiếng Anh",
+        "release_date": "2026-03-30",
+        "end_date": "2026-04-30",
+        "status": "COMING_SOON",
+        "label": "K",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 16,
+    "fields": {
+        "created_at": "2026-02-26T09:15:51Z",
+        "updated_at": "2026-03-16T07:19:41.116Z",
+        "is_deleted": false,
+        "title": "KHỦNG LONG ĐÓN TẾT",
+        "search_title": "khung long don tet",
+        "description": "KHỦNG LONG ĐÓN TẾT Chuyến du hí “xuyên không” mở bát năm mới! Chỉ vì lạc vào một cánh cổng thời gian bị bỏ quên, nhóm bạn động vật rừng châu Phi bỗng dưng trở về tận thời tiền sử. Muốn về lại hiện tại, họ không còn cách nào khác là buộc phải hợp tác với những chú khủng long thời tiền sử đồ sộ và cùng nhau đối phó với băng nhóm người ngoài hành tinh lầy lội. Đó là hành trình đầy ắp tiếng cười, những pha rượt đuổi ngộ nghĩnh và hơn hết là tình bạn ấm áp vượt qua mọi khoảng cách thời gian. Khủng Long Đón Tết mang đến không khí giao thời rộn ràng với hình ảnh rực rỡ, nhân vật đáng yêu và câu chuyện vừa vui nhộn chạm đến trái tim khán giả ở bất kì độ tuổi nào. Mùng 1 Tết ra rạp, cùng nhau cười thật to và mở màn năm mới thật “xôm” nhé!",
+        "poster_file": "khung-long-don-tet",
+        "trailer_url": null,
+        "duration": 91,
+        "directors": "Sam Wilson",
+        "casts": "David Menkin, Ina Marie Smith, Ed Kear as Fneep, Rob Van Vuuren,...",
+        "genres": "Gia đình, Hoạt Hình, Phiêu Lưu",
+        "languages_subtitles": "Lồng tiếng Việt, phụ đề tiếng Anh",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 17,
+    "fields": {
+        "created_at": "2026-02-26T09:16:05Z",
+        "updated_at": "2026-03-16T07:19:41.117Z",
+        "is_deleted": false,
+        "title": "CẢM ƠN NGƯỜI ĐÃ THỨC CÙNG TÔI",
+        "search_title": "cam on nguoi da thuc cung toi",
+        "description": "Cảm Ơn Người Đã Thức Cùng Tôi là một hành trình cảm xúc của những người trẻ đi tìm đáp án cho câu hỏi “Ước mơ của bạn là gì?”, để rồi chính họ khi bước vào thế giới trưởng thành dần nhận ra câu hỏi quan trọng nhất là “Mình muốn thực hiện ước mơ đó cùng ai?”",
+        "poster_file": "cam-on-nguoi-da-thuc-cung-toi",
+        "trailer_url": "https://www.youtube.com/embed/uf2oOeJ-Z3s?rel=0&showinfo=0",
+        "duration": 137,
+        "directors": "Chung Chí Công",
+        "casts": "Võ Phan Kim Khánh, Trần Doãn Hoàng, Nguyễn Hùng",
+        "genres": "Gia đình, Tình cảm",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "K",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 18,
+    "fields": {
+        "created_at": "2026-02-26T09:16:15Z",
+        "updated_at": "2026-03-16T07:19:41.118Z",
+        "is_deleted": false,
+        "title": "CHUYỆN KINH DỊ GIỚI SIÊU GIÀU",
+        "search_title": "chuyen kinh di gioi sieu giau",
+        "description": "Sabdo và Intan sống một cuộc sống giản dị, hạnh phúc, nhưng tất cả đã bị phá hủy khi ngôi nhà thừa kế của cha mẹ họ bị cháy rụi.",
+        "poster_file": "chuyen-kinh-di-gioi-sieu-giau",
+        "trailer_url": "https://www.youtube.com/embed/lZj4EqHa05A?rel=0&showinfo=0",
+        "duration": 95,
+        "directors": "Kimo Stamboel",
+        "casts": "Rio Dewanto, Marthino Lio, Nyimas Ratu Rafa",
+        "genres": "Kinh Dị",
+        "languages_subtitles": "Tiếng Indonesia - Phụ đề tiếng Việt và tiếng Anh",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "T18",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 19,
+    "fields": {
+        "created_at": "2026-02-26T09:16:25Z",
+        "updated_at": "2026-03-16T07:19:41.120Z",
+        "is_deleted": false,
+        "title": "TÀI",
+        "search_title": "tai",
+        "description": "Tài bất ngờ rơi vào vòng xoáy nguy hiểm vì một khoản nợ tiền khổng lồ. Bị dồn vào đường cùng, Tài buộc phải dấn thân vào những lựa chọn sai lầm khiến gia đình trở thành mục tiêu bị đe dọa. Đằng sau những hành động liều lĩnh ấy là nỗi ám ảnh về người mẹ mà Tài luôn muốn bảo vệ và bù đắp bằng mọi giá. Khi ranh giới giữa đúng và sai ngày càng mong manh, Tài phải đối mặt với câu hỏi lớn nhất của đời mình: liệu lòng hiếu thảo có đủ để biện minh cho con đường anh đang đi.",
+        "poster_file": "tai",
+        "trailer_url": "https://www.youtube.com/embed/LvOabypj7zs?rel=0&showinfo=0",
+        "duration": 101,
+        "directors": "Mai Tài Phến",
+        "casts": "Mai Tài Phến, Mỹ Tâm, NSƯT Hạnh Thuý, Hồng Ánh, Long Đẹp Trai, Vinh Râu, Trần Kim Hải, Sỹ Toàn, Quang Trung, Huỳnh Thi, Ray Nguyễn,...",
+        "genres": "Gia đình, Hành Động, Tâm Lý",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "T16",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 20,
+    "fields": {
+        "created_at": "2026-02-26T09:16:36Z",
+        "updated_at": "2026-03-16T07:19:41.122Z",
+        "is_deleted": false,
+        "title": "The dominATE Experience TOUR DIỄN TOÀN CẦU",
+        "search_title": "the dominate experience tour dien toan cau",
+        "description": "Với sự xuất hiện của hiện tượng K-Pop toàn cầu Stray Kids, cùng những màn trình diễn bùng nổ từ tour diễn thế giới phá kỷ lục, hình ảnh hậu trường độc quyền và những cuộc trò chuyện gần gũi, chân thật với các thành viên, Stray Kids: The dominATE Experience là một phim concert hoành tráng, đưa người hâm mộ đến sát sân khấu như ngồi hàng ghế đầu và mở ra góc nhìn đặc biệt, chưa từng có về ban nhạc mà họ yêu mến.",
+        "poster_file": "the-dominate-experience-tour-dien-toan-cau",
+        "trailer_url": "https://www.youtube.com/embed/BUC-QOfpkW8?rel=0&showinfo=0",
+        "duration": 146,
+        "directors": "Paul Dugdale, cùng những phân đoạn phim tài liệu được thực hiện bởi Farah X.",
+        "casts": "Bang Chan, Lee Know, Changbin, Hyunjin, HAN, Felix, Seungmin, I.N",
+        "genres": "Hòa nhạc, Phim tài liệu",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "P",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 21,
+    "fields": {
+        "created_at": "2026-02-26T09:16:50Z",
+        "updated_at": "2026-03-16T07:19:41.123Z",
+        "is_deleted": false,
+        "title": "QUỶ NHẬP TRÀNG 2",
+        "search_title": "quy nhap trang 2",
+        "description": "Quỷ Nhập Tràng 2 là tiền truyện của nhân vật Minh Như, trở về xưởng nhuộm gia đình sau nhiều năm bị xua đuổi. Tại đây, cô phải đối mặt với những hiện tượng ma quái cùng sự thật tàn khốc về cái chết của mẹ và giao ước đẫm máu năm xưa. Ác giả ác báo, liệu Minh Như có thoát khỏi vòng vây của quỷ dữ?",
+        "poster_file": "quy-nhap-trang-2",
+        "trailer_url": "https://www.youtube.com/embed/q0UWKBzFFxQ?rel=0&showinfo=0",
+        "duration": 126,
+        "directors": "Pom Nguyễn",
+        "casts": "Khả Như, Doãn Quốc Đam, Ngọc Hương...",
+        "genres": "Hồi hộp, Kinh Dị",
+        "languages_subtitles": "Tiếng Việt - Phụ đề tiếng Anh",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "T18",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 22,
+    "fields": {
+        "created_at": "2026-02-26T09:17:03Z",
+        "updated_at": "2026-03-16T07:19:41.124Z",
+        "is_deleted": false,
+        "title": "LỜI NGUYỀN THƯ VIỆN MIKURA",
+        "search_title": "loi nguyen thu vien mikura",
+        "description": "Mikura Mifuyu rất ghét đọc sách lại là con gái của \"gia tộc\" nhiều đời quản lý một thư viện khổng lồ. Khi những cuốn sách bị đánh cắp, cô bị nuốt chửng vào thế giới của những câu chuyện. Mifuyu buộc phải truy tìm kẻ trộm sách, tìm hiểu về \"lời nguyền\" cũng như \"gia tộc\" mà ngay cả cô cũng không hề hay biết. Hành trình phiêu lưu qua \"Thế giới sách\" chính thức bắt đầu!",
+        "poster_file": "loi-nguyen-thu-vien-mikura",
+        "trailer_url": "https://www.youtube.com/embed/rRA7t2VBvPU?rel=0&showinfo=0",
+        "duration": 119,
+        "directors": "Fukuoka Daisei",
+        "casts": "Kataoka Rin, Tamaki Sora",
+        "genres": "Hoạt Hình, Thần thoại",
+        "languages_subtitles": "Tiếng Nhật – phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "T13",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 23,
+    "fields": {
+        "created_at": "2026-02-26T09:17:14Z",
+        "updated_at": "2026-03-16T07:19:41.126Z",
+        "is_deleted": false,
+        "title": "TỘI PHẠM 101",
+        "search_title": "toi pham 101",
+        "description": "Lấy bối cảnh thành phố Los Angeles đầy nắng và bụi đường, Tội Phạm 101 kể về một tên trộm nữ trang bí ẩn (Chris Hemsworth) với hàng loạt phi vụ táo bạo khiến cảnh sát phải đau đầu. Trong lúc chuẩn bị cho phi vụ lớn nhất của mình, hắn gặp gỡ một nữ nhân viên bảo hiểm (Halle Berry), người cũng đang vật lộn với những lựa chọn trong đời mình. Trong khi đó, một thanh tra (Mark Ruffalo) đã tìm ra quy luật trong chuỗi các vụ án và đang ráo riết truy đuổi tên trộm, khiến cuộc chơi trở nên căng thẳng hơn bao giờ hết. Khi phi vụ định mệnh đến gần, ranh giới giữa kẻ săn đuổi và con mồi dần trở nên mờ nhạt và cả ba buộc phải đối mặt với những lựa chọn khó khăn và không còn cơ hội để quay đầu lại. Bộ phim được chuyển thể từ tiểu thuyết ngắn nổi tiếng cùng tên của Don Winslow, do Bart Layton (tác giả của American Animals, The Imposter) viết kịch bản và đạo diễn. Dàn diễn viên có sự tham gia của Barry Keoghan, Monica Barbaro, Corey Hawkins, Jennifer Jason Leigh và Nick Nolte.",
+        "poster_file": "toi-pham-101",
+        "trailer_url": "https://www.youtube.com/embed/TxY9GfEEMOI?rel=0&showinfo=0",
+        "duration": 112,
+        "directors": "Bart Layton",
+        "casts": "Chris Hemsworth, Mark Ruffalo, Halle Berry, Barry Keoghan, Monica Barbaro, Corey Hawkins, Jennifer Jason Leigh, Nick Nolte",
+        "genres": "Hồi hộp, Tội phạm",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 24,
+    "fields": {
+        "created_at": "2026-02-26T09:17:28Z",
+        "updated_at": "2026-03-16T07:19:41.129Z",
+        "is_deleted": false,
+        "title": "CÚ NHẢY KỲ DIỆU",
+        "search_title": "cu nhay ky dieu",
+        "description": "Hoppers xoay quanh Mabel, một cô gái yêu động vật, vô tình tiếp cận công nghệ cho phép chuyển ý thức con người vào cơ thể robot động vật. Nhờ đó, Mabel “nhảy” vào thế giới tự nhiên dưới hình dạng một con hải ly và có thể giao tiếp trực tiếp với các loài khác. Trong hành trình này, cô dần khám phá cách động vật nhìn nhận con người, đồng thời phát hiện những mối nguy đang đe dọa môi trường sống của chúng. Tận dụng công nghệ Nhảy, Mabel đã trở thành cầu nối, mang lại cuộc sống cân bằng cho cả con người và động vật.",
+        "poster_file": "cu-nhay-ky-dieu",
+        "trailer_url": "https://www.cgv.vn/default/www.youtube.com/embed/Zq02dypd0i8?rel=0&showinfo=0",
+        "duration": 112,
+        "directors": "Daniel Chong",
+        "casts": "Jon Hamm, Bobby Moynihan, Piper Curda",
+        "genres": "Gia đình, Hài, Hoạt Hình, Phiêu Lưu",
+        "languages_subtitles": "Tiếng Anh - Phụ dề tiếng Việt; Lồng tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 25,
+    "fields": {
+        "created_at": "2026-02-26T09:17:41Z",
+        "updated_at": "2026-03-16T07:19:41.134Z",
+        "is_deleted": false,
+        "title": "ĐẾM NGÀY XA MẸ",
+        "search_title": "dem ngay xa me",
+        "description": "Đếm Ngày Xa Mẹ xoay quanh cặp mẹ con Eun-sil (Jang Hye-jin) và Ha-min (Choi Woo-shik). Mỗi lần ăn một món do mẹ nấu, Ha-min lại nhìn thấy một con số khó lý giải. Sau mỗi bữa ăn, con số ấy giảm đi một đơn vị. Ha-min sớm nhận ra một sự thật kinh hoàng: khi con số chạm về 0, mẹ anh sẽ qua đời. Kể từ đó, cuộc sống bình thường của Ha-min bị đảo lộn hoàn toàn. Để bảo vệ quãng thời gian còn lại của mẹ, Ha-min bắt đầu tránh xa những bữa cơm nhà, viện đủ mọi lý do để không phải ngồi vào bàn ăn và dần trở nên xa cách với mẹ. Liệu thời gian để Hamin ở bên mẹ còn được bao lâu nữa?",
+        "poster_file": "dem-ngay-xa-me",
+        "trailer_url": "https://www.youtube.com/embed/kP3_g0uD0pU?rel=0&showinfo=0",
+        "duration": 109,
+        "directors": "Kim Tae-yong",
+        "casts": "Choi Woo-shik, Jang Hye-jin, Gong Seung-yeon",
+        "genres": "Gia đình",
+        "languages_subtitles": "Tiếng Hàn - phụ đề tiếng Việt & Lồng tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "T13",
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 26,
+    "fields": {
+        "created_at": "2026-02-26T09:17:53Z",
+        "updated_at": "2026-03-16T07:19:41.137Z",
+        "is_deleted": false,
+        "title": "CÔ DÂU!",
+        "search_title": "co dau!",
+        "description": "Một cách tiếp cận táo bạo, phá vỡ mọi khuôn mẫu đối với một trong những câu chuyện hấp dẫn nhất thế giới. Bộ phim theo chân Frankenstein cô đơn (do Chrisitian Bale thủ vai) lên đường đến Chicago những năm 1930 để tìm đến nhà khoa học Dr. Euphronious (Annette Bening – 5 lần đề cử Oscar thủ vai), với hy vọng bà có thể tạo ra một người bạn đồng hành cho mình. Cả hai hồi sinh một cô gái trẻ đã bị sát hại, và Cô Dâu (Buckley thủ vai) đã ra đời. Những gì xảy ra sau đó đã vượt xa mọi tưởng tượng của họ: những vụ giết người, sự chiếm hữu, một phong trào văn hóa hoang dại và cấp tiến cũng như mối tình ngoài vòng pháp luật đầy cuồng nhiệt và bùng nổ!",
+        "poster_file": "co-dau-!",
+        "trailer_url": "https://www.youtube.com/embed/HYIOdcSGON4?rel=0&showinfo=0",
+        "duration": 105,
+        "directors": "Maggie Gyllenhaal",
+        "casts": "Jake Gyllenhaal, Christian Bale, Jessie Buckley,…",
+        "genres": "Kinh Dị, Nhạc kịch, Tình cảm",
+        "languages_subtitles": "Tiếng Anh – phụ đề tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 27,
+    "fields": {
+        "created_at": "2026-02-26T09:18:05Z",
+        "updated_at": "2026-03-16T07:19:41.139Z",
+        "is_deleted": false,
+        "title": "TỨ HỔ ĐẠI NÁO",
+        "search_title": "tu ho dai nao",
+        "description": "Trong Thế Chiến II, 9 tấn vàng của chính phủ Thái Lan đột ngột bị thất lạc - Châm ngòi cho cuộc truy lùng đẫm máu khắp cả nước. Bốn tên cướp khét tiếng, mỗi người sở hữu một năng lực tà thuật riêng, bị lôi kéo vào trò chơi tử thần. Giữa thời đại mà công lý sụp đổ và người dân không còn nơi nương tựa, một huyền thoại hùng mạnh đã ra đời: Tứ Hổ.",
+        "poster_file": "tu-ho-dai-nao",
+        "trailer_url": "https://www.youtube.com/embed/_oHDM5h3wRE?rel=0&showinfo=0",
+        "duration": 92,
+        "directors": "Kongkiat Komesiri",
+        "casts": "Sukollawat Kanaros, Mario Maurer, Arak Amornsupasiri, Phakhin Khamwilaisak, Mashannoad Suvalmas, Todsapol Maisuk, and Phollawat Manuprasert",
+        "genres": "Hài, Hành Động, Thần thoại",
+        "languages_subtitles": "Phụ đề Tiếng Việt & Lồng Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 28,
+    "fields": {
+        "created_at": "2026-02-26T09:18:17Z",
+        "updated_at": "2026-03-16T07:19:41.141Z",
+        "is_deleted": false,
+        "title": "THOÁT KHỎI TẬN THẾ",
+        "search_title": "thoat khoi tan the",
+        "description": "Ryland Grace (Ryan Gosling) tỉnh dậy trong một con tàu vũ trụ mà không hề có bất kỳ ký ức gì. Anh dần khám phá ra mình là thành viên duy nhất còn sống sót của dự án Hail Mary - một sứ mệnh táo bạo đưa con tàu đến hệ mặt trời Tau Ceti để tìm cách cứu Trái đất khỏi ngày tận thế. Bất ngờ khi Grace đối mặt với một con tàu lạ và gặp gỡ sinh vật ngoài hành tinh mà anh đặt tên là Rocky.",
+        "poster_file": "thoat-khoi-tan-the",
+        "trailer_url": "https://www.youtube.com/embed/LQ9KHDpA9vI?rel=0&showinfo=0",
+        "duration": 137,
+        "directors": "Phil Lord, Christopher Miller",
+        "casts": "Ryan Gosling, Liz Kingsman, Milana Vayntrub, Sandra Hüller",
+        "genres": "Khoa Học Viễn Tưởng, Phiêu Lưu",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 29,
+    "fields": {
+        "created_at": "2026-02-26T09:18:30Z",
+        "updated_at": "2026-03-16T07:19:41.142Z",
+        "is_deleted": false,
+        "title": "CHÚNG SẼ ĐOẠT MẠNG",
+        "search_title": "chung se doat mang",
+        "description": "Đến từ New Line Cinema và Nocturna, CHÚNG SẼ ĐOẠT MẠNG (tựa gốc: THEY WILL KILL YOU) là một tác phẩm kinh dị - hành động - hài hước đẫm máu và đầy kịch tính xoay quanh cuộc chiến sống còn của một người phụ nữ tại tòa nhà xa hoa The Virgil - hang ổ của một giáo phái ma quỷ. Khi màn đêm buông xuống, những cạm bẫy được giăng ra, kẻ không thể sống sót sẽ trở thành vật tế tiếp theo. Một trận chiến chết chóc mãn nhãn cùng phong cách hài đen đầy mê hoặc sẽ sớm bắt đầu trên màn ảnh rộng.",
+        "poster_file": "chung-se-doat-mang",
+        "trailer_url": "https://www.youtube.com/embed/WYdP2RCSgCI?rel=0&showinfo=0",
+        "duration": 102,
+        "directors": "Kirill Sokolov",
+        "casts": "Zazie Beetz, Myha’La, Paterson Joseph, Tom Felton, Heather Graham, Patricia Arquette,...",
+        "genres": "Hài, Hành Động, Kinh Dị",
+        "languages_subtitles": "Tiếng Anh – Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 30,
+    "fields": {
+        "created_at": "2026-02-26T09:18:44Z",
+        "updated_at": "2026-03-16T07:19:41.144Z",
+        "is_deleted": false,
+        "title": "PHIM SUPER MARIO THIÊN HÀ",
+        "search_title": "phim super mario thien ha",
+        "description": "Phim Super Mario Thiên Hà là một bộ phim hoạt hình được lấy bối cảnh trong thế giới của Anh Em Super Mario và là phần tiếp theo của Phim Anh Em Super Mario – tác phẩm ra mắt năm 2023 và đạt doanh thu hơn 1,3 tỷ đô la trên toàn cầu. Cả hai bộ phim Phim Anh Em Super Mario (2023) và Phim Super Mario Thiên Hà đều do Chris Meledandri (hãng Illumination) và Shigeru Miyamoto (từ Nintendo) đồng sản xuất.",
+        "poster_file": "phim-super-mario-thien-ha",
+        "trailer_url": "https://www.youtube.com/embed/h7rCMpLDFK0?rel=0&showinfo=0",
+        "duration": 145,
+        "directors": "Aaron Horvath, Michael Jelenic",
+        "casts": "Chris Pratt, Anya Taylor-Joy, Charlie Day, Jack Black, Keegan-Michael Key, Benny Safdie, Kevin Michael Richardson và Brie Larson.",
+        "genres": "Hài, Hành Động, Hoạt Hình",
+        "languages_subtitles": "Phụ đề Tiếng Việt & Lồng Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 31,
+    "fields": {
+        "created_at": "2026-02-26T09:19:01Z",
+        "updated_at": "2026-03-16T07:19:41.145Z",
+        "is_deleted": false,
+        "title": "SONG HỶ LÂM NGUY",
+        "search_title": "song hy lam nguy",
+        "description": "Hai lễ cưới, một sang trọng sa hoa, một đạm bạc dân dã, đáng lý sẽ được tổ chức đối diện nhau. Rắc rối bắt đầu khi đội ngũ tổ chức của hai lễ cưới phát hiện ra danh sách khách mời của hai bên là giống nhau.",
+        "poster_file": "song-hy-lam-nguy",
+        "trailer_url": null,
+        "duration": 127,
+        "directors": "Vũ Hà",
+        "casts": "Dustin Nguyễn, Misthy, Trung Anh, Đinh Y Nhung, Jun Vũ, Hoàng Phi, Hynee, Khoai Vũ",
+        "genres": "Gia đình, Hài, Tâm Lý",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 32,
+    "fields": {
+        "created_at": "2026-02-26T09:19:15Z",
+        "updated_at": "2026-03-16T07:19:41.147Z",
+        "is_deleted": false,
+        "title": "MỘT BỘ PHIM CỦA LEE CRONIN: XÁC ƯỚP",
+        "search_title": "mot bo phim cua lee cronin: xac uop",
+        "description": "Ngay sau sự trở lại và thành công vang dội của bộ phim EVIL DEAD RISE, biên kịch/đạo diễn Lee Cronin tiếp tục khai thác một trong những câu chuyện kinh dị kinh điển nhất mọi thời đại với phiên bản đầy kịch tính: MỘT BỘ PHIM CỦA LEE CRONIN: XÁC ƯỚP. Phim khai thác câu chuyện về cô con gái nhỏ của một nhà báo biến mất không dấu vết trong sa mạc. Tám năm sau, gia đình đã tan vỡ bỗng bàng hoàng khi cô bé trở về, và điều lẽ ra phải là một cuộc hội ngộ hạnh phúc lại biến thành một cơn ác mộng kinh hoàng.",
+        "poster_file": "mot-bo-phim-cua-lee-cronin-xac-uop",
+        "trailer_url": "https://www.youtube.com/embed/MCYebV4Dpww?rel=0&showinfo=0",
+        "duration": 146,
+        "directors": "Lee Cronin",
+        "casts": "Jack Reynor, Laia Costa, May Calamawy",
+        "genres": "Kinh Dị",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 33,
+    "fields": {
+        "created_at": "2026-02-26T09:19:27Z",
+        "updated_at": "2026-03-16T07:19:41.148Z",
+        "is_deleted": false,
+        "title": "ĐẠI TIỆC TRĂNG MÁU 8",
+        "search_title": "dai tiec trang mau 8",
+        "description": "Đại tiệc trăng máu 8 không chỉ là một bộ phim, đó là sự phơi bày tàn khốc những áp lực sau ống kính. Khi ở ranh giới giữa diễn xuất và bạo lực phim trường, liệu ai mới thực sự là nạn nhân trong cuộc chiến sinh tồn này? Quy tụ dàn sao đình đám nhất điện ảnh Việt, Đại Tiệc Trăng Máu 8 ấn định lịch khai tiệc vào dịp Đại lễ Giỗ Tổ Hùng Vương & 30.04.2026",
+        "poster_file": "dai-tiec-trang-mau-8",
+        "trailer_url": "https://www.youtube.com/embed/c9rigHdmO3w?rel=0&showinfo=0",
+        "duration": 126,
+        "directors": "Phan Gia Nhật Linh",
+        "casts": "Miu Lê, Liên Bỉnh Phát, Hứa Vĩ Văn, Hồng Ánh, Đức Khuê, Quỳnh Lý, Quốc Khánh",
+        "genres": "Hài, Kinh Dị, Tâm Lý",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 34,
+    "fields": {
+        "created_at": "2026-02-26T09:19:41Z",
+        "updated_at": "2026-03-16T07:19:41.149Z",
+        "is_deleted": false,
+        "title": "PHÍ PHÔNG: QUỶ MÁU RỪNG THIÊNG",
+        "search_title": "phi phong: quy mau rung thieng",
+        "description": "Bộ phim được lấy cảm hứng từ truyền thuyết dân gian về loài quỷ huyền bí “Phí Phông” - những người bình thường sống giữa cộng đồng, nhưng mang trong mình đặc tính chuyên hút máu hoặc hút sinh khí người. Hình tượng “Phí Phông” được lưu truyền qua nhiều thế hệ, gắn liền với đời sống tâm linh của cư dân vùng núi cao phía Bắc, gieo rắc nỗi ám ảnh trong ký ức dân gian.",
+        "poster_file": "phi-phong-quy-mau-rung-thieng",
+        "trailer_url": "https://www.youtube.com/embed/_92pMi2bopk?rel=0&showinfo=0",
+        "duration": 120,
+        "directors": "Đỗ Quốc Trung",
+        "casts": "Kiều Minh Tuấn, Nina Nutthacha Padovan, Diệp Bảo Ngọc, Đoàn Minh Anh, NSƯT Hạnh Thuý,...",
+        "genres": "Kinh Dị",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 35,
+    "fields": {
+        "created_at": "2026-02-26T09:19:53Z",
+        "updated_at": "2026-03-16T07:19:41.150Z",
+        "is_deleted": false,
+        "title": "MICHAEL",
+        "search_title": "michael",
+        "description": "Michael là bức chân dung điện ảnh khắc họa cuộc đời và di sản của một trong những nghệ sĩ có sức ảnh hưởng lớn nhất mà thế giới từng biết đến. Bộ phim kể về cuộc đời của Michael Jackson ngoài âm nhạc, theo dấu hành trình từ khi tài năng phi thường của ông được phát hiện trong vai trò giọng ca chính của nhóm Jackson Five, cho đến khi ông trở thành một nghệ sĩ có tầm nhìn xa, với khát vọng sáng tạo không ngừng để vươn tới danh hiệu “ngôi sao giải trí vĩ đại nhất thế giới”. Cho thấy cuộc sống phía sau hào quang sân khấu lẫn những màn trình diễn mang tính biểu tượng nhất trong giai đoạn đầu sự nghiệp solo, bộ phim mang đến cho khán giả một góc nhìn chân thực hơn bao giờ hết về Michael Jackson. Đây chính là nơi câu chuyện của ông bắt đầu.",
+        "poster_file": "michael",
+        "trailer_url": "https://www.youtube.com/embed/eQvtKKMuP9k%20?rel=0&showinfo=0",
+        "duration": 145,
+        "directors": "Antoine Fuqua",
+        "casts": "Jaafar Jackson, Nia Long, Laura Harrier, Juliano Krue Valdi, cùng Miles Teller và Colman Domingo.",
+        "genres": "Nhạc kịch, Tâm Lý",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 36,
+    "fields": {
+        "created_at": "2026-02-26T09:20:03Z",
+        "updated_at": "2026-03-16T07:19:41.152Z",
+        "is_deleted": false,
+        "title": "MORTAL KOMBAT: CUỘC CHIẾN SINH TỬ II",
+        "search_title": "mortal kombat: cuoc chien sinh tu ii",
+        "description": "Hãng phim New Line Cinema, phần tiếp theo đầy kịch tính trong loạt phim bom tấn chuyển thể từ trò chơi điện tử đình đám – Mortal Kombat II – trở lại với tất cả sự tàn bạo vốn có. Lần này, những nhà vô địch được yêu thích – nay có sự góp mặt của chính Johnny Cage – sẽ đối đầu với nhau trong trận chiến đẫm máu, không khoan nhượng, nhằm đánh bại thế lực đen tối của Shao Kahn đang đe dọa đến sự tồn vong của Earthrealm và các chiến binh bảo vệ nó.",
+        "poster_file": "mortal-kombat-cuoc-chien-sinh-tu-II",
+        "trailer_url": "https://www.youtube.com/embed/_UYoxtVTKEI?rel=0&showinfo=0",
+        "duration": 101,
+        "directors": "Simon McQuoid",
+        "casts": "Karl Urban, Adeline Rudolph, Jessica McNamee, Josh Lawson, Ludi Lin, Mehcad Brooks, Tati Gabrielle, Lewis Tan,...",
+        "genres": "Hành Động, Phiêu Lưu, Thần thoại",
+        "languages_subtitles": "Tiếng Anh – Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 37,
+    "fields": {
+        "created_at": "2026-02-26T09:20:15Z",
+        "updated_at": "2026-03-16T07:19:41.153Z",
+        "is_deleted": false,
+        "title": "THỜI KHẮC CÔNG BỐ",
+        "search_title": "thoi khac cong bo",
+        "description": "Nếu một ngày bạn nhận ra rằng chúng ta chưa bao giờ đơn độc, nếu có ai đó đứng trước mặt bạn và chứng minh điều đó là sự thật, liệu việc đó khiến bạn sợ hãi? Mùa Hè 2026, sự thật nằm trong tay của bảy tỷ con người. Chúng ta đang tiến rất gần đến… Thời Khắc Công Bố.",
+        "poster_file": "thoi-khac-cong-bo",
+        "trailer_url": "https://www.youtube.com/embed/CFaJqfj49rg?rel=0&showinfo=0",
+        "duration": 91,
+        "directors": "Steven Spielberg",
+        "casts": "Emily Blunt, Josh O’Connor, Colin Firth, Eve Hewson, Colman Domingo.",
+        "genres": "Khoa Học Viễn Tưởng",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 38,
+    "fields": {
+        "created_at": "2026-02-26T09:20:26Z",
+        "updated_at": "2026-03-16T07:19:41.154Z",
+        "is_deleted": false,
+        "title": "SUPERGIRL",
+        "search_title": "supergirl",
+        "description": "“Supergirl” – bom tấn mới nhất từ DC Studios – sẽ chính thức đổ bộ các rạp chiếu toàn cầu vào mùa hè này, với Milly Alcock đảm nhận vai kép Supergirl/Kara Zor-El. Khi một kẻ thù bất ngờ và tàn nhẫn giáng đòn ngay tại nơi cô gọi là nhà, Kara Zor-El – hay còn được biết đến với cái tên Supergirl – buộc phải bắt tay với một đồng minh không ai ngờ tới, bắt đầu chuyến hành trình xuyên dải ngân hà đầy sử thi, nơi vừa là cuộc trả thù, vừa là hành trình đi tìm công lý.",
+        "poster_file": "supergirl",
+        "trailer_url": "https://www.youtube.com/embed/TF4xKGO6kp4?rel=0&showinfo=0",
+        "duration": 118,
+        "directors": "Craig Gillespie",
+        "casts": "Milly Alcock, Matthias Schoenaerts, Eve Ridley, David Krumholtz, Emily Beecham, Jason Momoa,...",
+        "genres": "Hành Động, Phiêu Lưu",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 39,
+    "fields": {
+        "created_at": "2026-02-26T09:20:37Z",
+        "updated_at": "2026-03-16T07:19:41.155Z",
+        "is_deleted": false,
+        "title": "MINIONS & QUÁI VẬT",
+        "search_title": "minions & quai vat",
+        "description": "Minions & Quái Vật là câu chuyện vừa náo loạn, vừa ngớ ngẩn nhưng “hoàn toàn có thật” về cách Minions chinh phục Hollywood, trở thành ngôi sao điện ảnh, rồi mất tất cả, vô tình thả quái vật ra khắp thế giới và sau đó phải cùng nhau hợp sức để cứu lấy hành tinh khỏi chính mớ hỗn loạn mà mình tạo ra.",
+        "poster_file": "minions-&-quai-vat",
+        "trailer_url": "https://www.youtube.com/embed/sb9_6f8Y_40%20?rel=0&showinfo=0",
+        "duration": 141,
+        "directors": "Pierre Coffin",
+        "casts": "",
+        "genres": "Hoạt Hình",
+        "languages_subtitles": "Phụ đề Tiếng Việt & Lồng Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 40,
+    "fields": {
+        "created_at": "2026-02-26T09:20:52Z",
+        "updated_at": "2026-03-16T07:19:41.158Z",
+        "is_deleted": false,
+        "title": "MOANA 2026",
+        "search_title": "moana 2026",
+        "description": "Nữ anh hùng biển cả quay trở lại. Moana từ Disney sẽ khơi dậy một làn sóng mới, để sự dũng cảm, lòng vị tha và âm nhạc hòa chung một nhịp chảy. Chuẩn bị bước vào chuyến phiêu lưu từ 10.07.2026. #MoanaVN",
+        "poster_file": "moana-2026",
+        "trailer_url": "https://www.youtube.com/embed/KT80lVBPChY?rel=0&showinfo=0",
+        "duration": 99,
+        "directors": "Thomas Kail",
+        "casts": "Catherine Laga'aia, Dwayne Johnson, John Tui",
+        "genres": "Gia đình, Hài, Hành Động, Phiêu Lưu",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt; Lồng tiếng",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 41,
+    "fields": {
+        "created_at": "2026-02-26T09:21:03Z",
+        "updated_at": "2026-03-16T07:19:41.160Z",
+        "is_deleted": false,
+        "title": "THE ODYSSEY",
+        "search_title": "the odyssey",
+        "description": "Bộ phim tiếp theo của Christopher Nolan, The Odyssey, là một sử thi hành động mang màu sắc thần thoại, được quay tại nhiều địa điểm trên khắp thế giới bằng công nghệ phim IMAX® hoàn toàn mới. Bộ phim lần đầu tiên đưa thiên sử thi kinh điển của Homer lên màn ảnh IMAX®, và sẽ khởi chiếu tại các rạp trên toàn thế giới vào ngày 17 tháng 7 năm 2026.",
+        "poster_file": "the-odyssey",
+        "trailer_url": "https://www.youtube.com/embed/TiN2Ht4ZHgk?rel=0&showinfo=0",
+        "duration": 111,
+        "directors": "Christopher Nolan",
+        "casts": "Benny Safdie, Anne Hathaway, Matt Damon, Robert Pattinson, Tom Holland, Zendaya, Charlize Theron…",
+        "genres": "Hành Động, Thần thoại",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 42,
+    "fields": {
+        "created_at": "2026-02-26T09:21:13Z",
+        "updated_at": "2026-03-16T07:19:41.161Z",
+        "is_deleted": false,
+        "title": "CHÀNG MÈO MANG MŨ",
+        "search_title": "chang meo mang mu",
+        "description": "Trong phim,Chàng Mèo Mang Mũ của chúng ta nhận nhiệm vụ khó khăn nhất từ trước đến nay từ tổ chức I.I.I.I. (Viện Sáng Tạo và Cảm Hứng, LLC): cổ vũ tinh thần cho Gabby và Sebastian, hai anh em đang vật lộn với việc thích nghi sau khi chuyển đến một thị trấn mới. Với \"thành tích\" thường xuyên làm quá mọi chuyện, lần này có thể sẽ là cơ hội cuối cùng để anh chàng chuyên gây rối này chứng minh bản thân nếu không muốn mất đi chiếc mũ thần kỳ!",
+        "poster_file": "chang-meo-mang-mu",
+        "trailer_url": "https://www.youtube.com/embed/SBkTtFz7v8E?rel=0&showinfo=0",
+        "duration": 143,
+        "directors": "Alessandro Carloni, Erica Rivinoja",
+        "casts": "Bill Hader, Xochitl Gomez, Matt Berry, Quinta Brunson, Paula Pell,...",
+        "genres": "Gia đình, Hài, Hoạt Hình, Phiêu Lưu",
+        "languages_subtitles": "Tiếng Anh với phụ đề tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 43,
+    "fields": {
+        "created_at": "2026-02-26T09:21:29Z",
+        "updated_at": "2026-03-16T07:19:41.164Z",
+        "is_deleted": false,
+        "title": "MADAMES THANH SẮC",
+        "search_title": "madames thanh sac",
+        "description": "Madames Thanh Sắc xoay quanh cuộc đời của đại mỹ nhân Cầm Thanh (Thanh Hằng) và Madame Sắc (Hồng Ánh) - bà chủ vũ trường Kim Đô vô cùng giàu có và sở hữu nhiều kim cương. Dù ở dưới trướng của bà Sắc và từng bước trở thành vũ nữ đình đám nhất Sài Gòn những năm 1960, nhưng Cầm Thanh luôn muốn nổi loạn. Từ đó, hai người phụ nữ bắt đầu cuộc giằng co căng thẳng dẫn đến những sự kiện gây rúng động.",
+        "poster_file": "madames-thanh-sac",
+        "trailer_url": null,
+        "duration": 121,
+        "directors": "Thắng Vũ",
+        "casts": "Thanh Hằng, Hồng Ánh",
+        "genres": "Tâm Lý, Tình cảm, Tội phạm",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 44,
+    "fields": {
+        "created_at": "2026-02-26T09:21:40Z",
+        "updated_at": "2026-03-16T07:19:41.166Z",
+        "is_deleted": false,
+        "title": "DIGGER",
+        "search_title": "digger",
+        "description": "DIGGER. Trò cười rung chuyển cả thế giới. Dự kiến khởi chiếu tháng 10.2026.",
+        "poster_file": "digger",
+        "trailer_url": "https://www.youtube.com/embed/OqTehoWZmDg?rel=0&showinfo=0",
+        "duration": 119,
+        "directors": "Alejandro G. Iñárritu",
+        "casts": "Tom Cruise, Sandra Hüller, John Goodman, Michael Stuhlbarg,…",
+        "genres": "Hài, Tâm Lý",
+        "languages_subtitles": "Tiếng Anh - Phụ đề Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": null,
+        "versions": [
+            1
+        ]
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 45,
+    "fields": {
+        "created_at": "2026-02-26T09:21:53Z",
+        "updated_at": "2026-03-16T07:19:41.167Z",
+        "is_deleted": false,
+        "title": "BẪY TIỀN",
+        "search_title": "bay tien",
+        "description": "Khi một vụ lừa đảo qua điện thoại bất ngờ ập đến, Đăng Thức tưởng chừng nắm trong tay cuộc sống ổn định bỗng bị cuốn vào vòng xoáy nguy hiểm giữa tiền bạc, tình thân và niềm tin — nơi mỗi lựa chọn không chỉ đánh đổi bằng tiền, mà còn bằng chính những người anh yêu thương.",
+        "poster_file": "bay-tien",
+        "trailer_url": "https://www.youtube.com/embed/0wuVwkK-Vsc?rel=0&showinfo=0",
+        "duration": 113,
+        "directors": "Oscar Dương",
+        "casts": "Liên Bỉnh Phát, Tam Triều Dâng, Kiều Oanh, Lê Hải, Mai Cát Vi và một số diễn viên khác",
+        "genres": "Tâm Lý",
+        "languages_subtitles": "Tiếng Việt",
+        "release_date": "2026-03-06",
+        "end_date": "2026-04-05",
+        "status": "NOW_SHOWING",
+        "label": "C16",
+        "versions": [
+            1
+        ]
+    }
+}
+]

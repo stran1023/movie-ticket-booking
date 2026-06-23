@@ -1,0 +1,336 @@
+[
+    {
+        "model": "concessions.concessioncategory",
+        "pk": 1,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.968Z",
+            "updated_at": "2026-03-11T06:34:16.969Z",
+            "is_deleted": false,
+            "name": "Snacks",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessioncategory",
+        "pk": 2,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.972Z",
+            "updated_at": "2026-03-11T06:34:16.972Z",
+            "is_deleted": false,
+            "name": "Drinks",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessioncategory",
+        "pk": 3,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.974Z",
+            "updated_at": "2026-03-11T06:34:16.974Z",
+            "is_deleted": false,
+            "name": "Seasonal",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 1,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.977Z",
+            "updated_at": "2026-03-12T06:43:38.995Z",
+            "is_deleted": false,
+            "name": "Popcorn",
+            "is_active": true,
+            "description": "Classic popcorn",
+            "category": 1,
+            "image_url": "http://127.0.0.1:8000/static/concessions/popcorn.jpg",
+            "is_combo": false,
+            "priority": 0.8
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 2,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.981Z",
+            "updated_at": "2026-03-12T06:43:21.223Z",
+            "is_deleted": false,
+            "name": "Nachos",
+            "is_active": true,
+            "description": "Crispy nachos",
+            "category": 1,
+            "image_url": "http://127.0.0.1:8000/static/concessions/nachos.jpg",
+            "is_combo": false,
+            "priority": 0.5
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 3,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.983Z",
+            "updated_at": "2026-03-12T06:42:51.969Z",
+            "is_deleted": false,
+            "name": "Cola",
+            "is_active": true,
+            "description": "Soda drink",
+            "category": 2,
+            "image_url": "http://127.0.0.1:8000/static/concessions/cola.jpg",
+            "is_combo": false,
+            "priority": 0.82
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 4,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.984Z",
+            "updated_at": "2026-03-12T06:42:43.000Z",
+            "is_deleted": false,
+            "name": "Mineral Water",
+            "is_active": true,
+            "description": "Still water",
+            "category": 2,
+            "image_url": "http://127.0.0.1:8000/static/concessions/mineral_water.webp",
+            "is_combo": false,
+            "priority": 0.6
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 5,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.986Z",
+            "updated_at": "2026-03-12T06:43:09.824Z",
+            "is_deleted": false,
+            "name": "Xmas Combo",
+            "is_active": true,
+            "description": "Holiday special",
+            "category": 3,
+            "image_url": "http://127.0.0.1:8000/static/concessions/xmas_combo.webp",
+            "is_combo": true,
+            "priority": 0.85
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 6,
+        "fields": {
+            "created_at": "2026-03-16T08:25:23.401Z",
+            "updated_at": "2026-03-16T08:25:23.523Z",
+            "is_deleted": false,
+            "name": "Family Tet Combo",
+            "is_active": true,
+            "description": "Family Tet Combo",
+            "category": 1,
+            "image_url": "http://127.0.0.1:8000/static/concessions/xmas_combo.webp",
+            "is_combo": true,
+            "priority": 0.8
+        }
+    },
+    {
+        "model": "concessions.concession",
+        "pk": 7,
+        "fields": {
+            "created_at": "2026-03-16T08:26:50.155Z",
+            "updated_at": "2026-03-16T08:26:50.204Z",
+            "is_deleted": false,
+            "name": "Easter Combo",
+            "is_active": true,
+            "description": "Easter Combo",
+            "category": 1,
+            "image_url": "http://127.0.0.1:8000/static/concessions/xmas_combo.webp",
+            "is_combo": true,
+            "priority": 0.9
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 1,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.991Z",
+            "updated_at": "2026-03-11T06:34:16.992Z",
+            "is_deleted": false,
+            "concession": 1,
+            "name": "Small",
+            "base_price": "30000",
+            "in_combo_price": "25000",
+            "sku": "POPCORN-SMALL",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 2,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.995Z",
+            "updated_at": "2026-03-11T06:34:16.995Z",
+            "is_deleted": false,
+            "concession": 1,
+            "name": "Medium",
+            "base_price": "45000",
+            "in_combo_price": "35000",
+            "sku": "POPCORN-MEDIUM",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 3,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.998Z",
+            "updated_at": "2026-03-11T06:34:16.998Z",
+            "is_deleted": false,
+            "concession": 1,
+            "name": "Large",
+            "base_price": "55000",
+            "in_combo_price": "45000",
+            "sku": "POPCORN-LARGE",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 4,
+        "fields": {
+            "created_at": "2026-03-11T06:34:16.998Z",
+            "updated_at": "2026-03-11T06:34:17.001Z",
+            "is_deleted": false,
+            "concession": 2,
+            "name": "Standard",
+            "base_price": "40000",
+            "in_combo_price": "35000",
+            "sku": "NACHOS-STANDARD",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 5,
+        "fields": {
+            "created_at": "2026-03-11T06:34:17.001Z",
+            "updated_at": "2026-03-11T06:34:17.001Z",
+            "is_deleted": false,
+            "concession": 3,
+            "name": "330ml",
+            "base_price": "20000",
+            "in_combo_price": "15000",
+            "sku": "COLA-330ML",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 6,
+        "fields": {
+            "created_at": "2026-03-11T06:34:17.004Z",
+            "updated_at": "2026-03-11T06:34:17.004Z",
+            "is_deleted": false,
+            "concession": 3,
+            "name": "500ml",
+            "base_price": "25000",
+            "in_combo_price": "20000",
+            "sku": "COLA-500ML",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.concessionvariant",
+        "pk": 7,
+        "fields": {
+            "created_at": "2026-03-11T06:34:17.004Z",
+            "updated_at": "2026-03-11T06:34:17.004Z",
+            "is_deleted": false,
+            "concession": 4,
+            "name": "500ml",
+            "base_price": "15000",
+            "in_combo_price": "10000",
+            "sku": "WATER-500ML",
+            "is_active": true
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 1,
+        "fields": {
+            "created_at": "2026-03-11T06:34:17.052Z",
+            "updated_at": "2026-03-11T06:34:17.052Z",
+            "is_deleted": false,
+            "combo_concession": 5,
+            "variant": 3,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 2,
+        "fields": {
+            "created_at": "2026-03-11T06:34:17.055Z",
+            "updated_at": "2026-03-11T06:34:17.055Z",
+            "is_deleted": false,
+            "combo_concession": 5,
+            "variant": 5,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 3,
+        "fields": {
+            "created_at": "2026-03-16T08:25:23.459Z",
+            "updated_at": "2026-03-16T08:25:23.545Z",
+            "is_deleted": false,
+            "combo_concession": 6,
+            "variant": 4,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 4,
+        "fields": {
+            "created_at": "2026-03-16T08:25:23.460Z",
+            "updated_at": "2026-03-16T08:25:23.579Z",
+            "is_deleted": false,
+            "combo_concession": 6,
+            "variant": 5,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 5,
+        "fields": {
+            "created_at": "2026-03-16T08:26:50.172Z",
+            "updated_at": "2026-03-16T08:26:50.205Z",
+            "is_deleted": false,
+            "combo_concession": 7,
+            "variant": 1,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 6,
+        "fields": {
+            "created_at": "2026-03-16T08:26:50.173Z",
+            "updated_at": "2026-03-16T08:26:50.208Z",
+            "is_deleted": false,
+            "combo_concession": 7,
+            "variant": 7,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "concessions.combocomponent",
+        "pk": 7,
+        "fields": {
+            "created_at": "2026-03-16T08:26:50.173Z",
+            "updated_at": "2026-03-16T08:26:50.209Z",
+            "is_deleted": false,
+            "combo_concession": 7,
+            "variant": 4,
+            "quantity": 1
+        }
+    }
+]

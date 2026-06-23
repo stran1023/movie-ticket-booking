@@ -1,0 +1,405 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block title %}Generate Showtimes{% endblock %}
+{% block extrahead %}
+{{ block.super }}
+<style>
+   :root {
+       --bg: #f4f6fb;
+       --card: #fff;
+       --border: #e0e4ec;
+       --accent: #417690;
+       --accent-h: #2c5364;
+       --danger: #d93025;
+       --ok: #1e8e3e;
+       --txt: #202124;
+       --muted: #5f6368;
+       --shadow: 0 1px 3px rgba(0,0,0,.08);
+       --radius: 8px;
+   }
+   #content { background: var(--bg); padding: 24px; }
+   .page-title { font-size: 24px; font-weight: 700; color: var(--txt); margin: 0 0 20px; }
+   /* Cards */
+   .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 18px; overflow: hidden; }
+   .card-hdr { padding: 12px 18px; font-weight: 600; font-size: 14px; color: var(--txt); background: #f8f9fc; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+   .card-body { padding: 18px; }
+   /* Form */
+   .fr { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+   .fg { flex: 1; min-width: 170px; }
+   .fg label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+   .fg input, .fg select { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; color: var(--txt); box-sizing: border-box; }
+   .fg input:focus, .fg select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(65,118,144,.12); }
+   /* Checkboxes */
+   .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+   .pill { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; cursor: pointer; font-size: 12px; user-select: none; }
+   .pill:hover { border-color: var(--accent); background: #eef3f8; }
+   .pill input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+   /* Movie table */
+   .mtbl { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+   .mtbl thead th { background: #f8f9fc; padding: 9px 12px; text-align: left; font-weight: 600; color: var(--muted); border-bottom: 2px solid var(--border); white-space: nowrap; }
+   .mtbl tbody tr { transition: background .1s; }
+   .mtbl tbody tr:hover { background: #f7f9fe; }
+   .mtbl tbody tr.off { opacity: .4; }
+   .mtbl tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+   .mtbl .en-cb { width: 17px; height: 17px; accent-color: var(--accent); cursor: pointer; }
+   .mtbl .pri-inp { width: 60px; text-align: center; padding: 5px 6px; }
+   .mtbl .price-inp { width: 95px; padding: 5px 6px; }
+   .slots { display: flex; gap: 8px; }
+   .slots label { display: flex; align-items: center; gap: 3px; font-size: 12px; color: var(--muted); }
+   .slots input { accent-color: var(--accent); width: 14px; height: 14px; }
+   .room-tag { display: inline-block; background: #e8f0fe; color: var(--accent); padding: 2px 7px; border-radius: 4px; font-size: 11px; margin: 1px 2px; white-space: nowrap; }
+   .sel-links { font-size: 12px; margin-left: 8px; }
+   .sel-links a { color: var(--accent); cursor: pointer; text-decoration: underline; margin: 0 3px; }
+   /* Buttons */
+   .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .15s; }
+   .btn-go { background: var(--accent); color: #fff; }
+   .btn-go:hover { background: var(--accent-h); box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+   .btn-go:disabled { opacity: .5; cursor: not-allowed; }
+   .btn-back { background: #fff; color: var(--txt); border: 1px solid var(--border); }
+   .btn-back:hover { background: #f4f6fb; }
+   .btn-bar { display: flex; gap: 10px; align-items: center; margin-top: 18px; }
+   /* Alerts */
+   .alert { padding: 12px 16px; border-radius: var(--radius); font-size: 13px; margin-top: 14px; display: none; }
+   .alert.ok { background: #e6f4ea; color: var(--ok); border: 1px solid #ceead6; display: block; }
+   .alert.err { background: #fce8e6; color: var(--danger); border: 1px solid #f5c6c2; display: block; }
+   /* Results */
+   .rtbl { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; margin-top: 10px; }
+   .rtbl th { background: #f8f9fc; padding: 8px 10px; text-align: left; font-weight: 600; color: var(--muted); border-bottom: 2px solid var(--border); }
+   .rtbl td { padding: 7px 10px; border-bottom: 1px solid var(--border); }
+   .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(65,118,144,.3); border-top-color: var(--accent); border-radius: 50%; animation: sp .6s linear infinite; }
+   @keyframes sp { to { transform: rotate(360deg); } }
+</style>
+{% endblock %}
+{% block content %}
+<h1 class="page-title">⚙️ Generate Showtimes</h1>
+<a href="../" class="btn btn-back" style="margin-bottom:16px;">← Back to Timeline</a>
+<!-- Global settings -->
+<div class="card">
+<div class="card-hdr">📅 Global Settings</div>
+<div class="card-body">
+<div style="background: #f8f9fc; border-left: 4px solid var(--accent); padding: 12px 16px; margin-bottom: 16px; border-radius: 4px; font-size: 13px; color: var(--txt);">
+    <strong style="display:block; margin-bottom:6px; color:var(--accent);">📖 How to configure global settings:</strong>
+    <ul style="margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.5;">
+        <li><strong>Start Date & Days:</strong> The timeframe for the generated drafts.</li>
+        <li><strong>Traffic Gap:</strong> Minimum staggering gap between start times across <i>different</i> rooms to prevent lobby crowding.</li>
+        <li><strong>Cleanup:</strong> Required turnaround time to clean a single room before the next movie.</li>
+        <li><strong>Delete existing drafts:</strong> Safely removes old, unconfirmed drafts in the selected period before placing new ones.</li>
+    </ul>
+</div>
+<div class="fr">
+<div class="fg">
+<label>Start Date</label>
+<input type="date" id="start-date" value="{{ today }}" min="{{ today }}">
+</div>
+<div class="fg">
+<label>Number of Days</label>
+<input type="number" id="num-days" value="1" min="1" max="7">
+</div>
+<div class="fg">
+<label>Traffic Gap (min)</label>
+<input type="number" id="traffic-gap" value="15" min="0">
+<small style="color:var(--muted); font-size:11px; margin-top:2px; display:block;">Recommended: 15-40</small>
+</div>
+<div class="fg">
+<label>Cleanup (min)</label>
+<input type="number" id="cleanup" value="15" min="0">
+<small style="color:var(--muted); font-size:11px; margin-top:2px; display:block;">Recommended: 15-25</small>
+</div>
+</div>
+<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer;">
+<input type="checkbox" id="clear-drafts" style="accent-color:var(--danger);width:15px;height:15px;">
+           Delete existing draft showtimes in date range before generating
+</label>
+</div>
+</div>
+<!-- Rooms -->
+<div class="card">
+<div class="card-hdr">🏠 Rooms</div>
+<div class="card-body">
+<div style="background: #f8f9fc; border-left: 4px solid var(--accent); padding: 12px 16px; margin-bottom: 16px; border-radius: 4px; font-size: 13px; color: var(--txt);">
+    <strong style="display:block; margin-bottom:6px; color:var(--accent);">📖 How to configure rooms:</strong>
+    <ul style="margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.5;">
+        <li><strong>Room Selection:</strong> Select which physical rooms to schedule showtimes for today.</li>
+        <li><strong>Room Formats:</strong> Generator automatically schedules 3D/IMAX formats only in rooms built to support them.</li>
+    </ul>
+</div>
+<div class="pill-row">
+           {% for r in rooms %}
+<label class="pill">
+<input type="checkbox" class="room-cb" value="{{ r.id }}" checked>
+               {{ r.name }} ({{ r.room_type }})
+</label>
+           {% empty %}
+<div style="padding: 12px 16px; background: #fff3cd; border: 1px solid #ffe69c; border-radius: 4px; color: #664d03; font-size: 13px; width: 100%; display: flex; align-items: center; justify-content: space-between;">
+    <span><strong>No rooms available.</strong> Please ensure rooms are created and have movies assigned to them.</span>
+    <a href="/admin/cinemas/cinemaroom/" class="btn btn-go" style="padding: 6px 12px; font-size: 12px; text-decoration: none;">⚙️ Manage Cinema Rooms</a>
+</div>
+           {% endfor %}
+</div>
+</div>
+</div>
+<!-- Movies with enable checkboxes -->
+<div class="card">
+<div class="card-hdr" style="justify-content: space-between;">
+       <span>🎬 Movie Configuration</span>
+<span class="sel-links" style="margin: 0; display: flex; gap: 8px;">
+<button type="button" class="btn btn-back" style="padding: 4px 10px; font-size: 11px;" onclick="toggleAll(true)">Select all</button>
+<button type="button" class="btn btn-back" style="padding: 4px 10px; font-size: 11px;" onclick="toggleAll(false)">Deselect all</button>
+</span>
+</div>
+<div class="card-body" style="overflow-x:auto;">
+<div style="background: #f8f9fc; border-left: 4px solid var(--accent); padding: 12px 16px; margin-bottom: 16px; border-radius: 4px; font-size: 13px; color: var(--txt);">
+    <strong style="display:block; margin-bottom:6px; color:var(--accent);">📖 How to configure movies:</strong>
+    <ul style="margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.5;">
+        <li><strong>On (Checkbox):</strong> Only checked movies will be scheduled. Uncheck to temporarily exclude a movie.</li>
+        <li><strong>Priority (1-10):</strong> Higher numbers mean the movie gets scheduled more frequently. <i>(e.g., Priority 10 gets twice as many showtimes as Priority 5)</i></li>
+        <li><strong>Time Slots:</strong> Choose which parts of the day the movie is allowed to play.</li>
+        <li><strong>Base Price:</strong> The default ticket price for standard 2D formats. The system automatically adjusts prices for 3D/IMAX.</li>
+    </ul>
+</div>
+<table class="mtbl">
+<thead>
+<tr>
+<th style="width:36px;">On</th>
+<th>Movie</th>
+<th>Duration</th>
+<th>Formats</th>
+<th>Assigned Rooms</th>
+<th style="width:90px;">Priority</th>
+<th>Time Slots</th>
+<th style="width:100px;">Base Price</th>
+</tr>
+</thead>
+<tbody>
+               {% for m in movies %}
+<tr data-mid="{{ m.id }}" class="m-row">
+<td style="text-align:center;">
+<input type="checkbox" class="en-cb" data-mid="{{ m.id }}" checked>
+</td>
+<td style="font-weight:600;">{{ m.title }}</td>
+<td>{{ m.duration }} min</td>
+<td>{{ m.version_names }}</td>
+<td>
+                       {% for rn in m.room_names %}
+<span class="room-tag">{{ rn }}</span>
+                       {% endfor %}
+</td>
+<td><input type="number" class="pri-inp m-pri" data-mid="{{ m.id }}" value="5" min="1" max="10"></td>
+<td>
+<div class="slots">
+<label><input type="checkbox" class="sl-cb" data-mid="{{ m.id }}" value="morning" checked> Morning</label>
+<label><input type="checkbox" class="sl-cb" data-mid="{{ m.id }}" value="afternoon" checked> Afternoon</label>
+<label><input type="checkbox" class="sl-cb" data-mid="{{ m.id }}" value="night" checked> Night</label>
+</div>
+</td>
+<td><input type="number" class="price-inp m-price" data-mid="{{ m.id }}" value="75000" step="1000" min="0"></td>
+</tr>
+               {% empty %}
+<tr>
+<td colspan="8" style="text-align: center; padding: 40px 10px; color: #664d03; background: #fff3cd; border: 1px solid #ffe69c;">
+    <strong>No movies available for scheduling.</strong><br>
+    <span style="font-size: 13px;">Please ensure movies are assigned to your active rooms.</span><br>
+    <a href="/admin/cinemas/cinemaroom/" class="btn btn-go" style="margin-top: 14px; padding: 6px 16px; font-size: 13px; text-decoration: none;">⚙️ Manage Cinema Rooms to Assign Movies</a>
+</td>
+</tr>
+               {% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+<div class="btn-bar" style="justify-content: space-between;">
+<div>
+<button class="btn btn-back" type="button" id="btn-save" title="Save current configuration to your browser">💾 Save Config</button>
+<button class="btn btn-back" type="button" id="btn-clear" title="Clear configuration to defaults" style="color:var(--danger); margin-left: 8px;">🗑️ Clear Config</button>
+</div>
+<div style="display:flex; gap:10px; align-items:center;">
+<span id="gen-spin" style="display:none;"><span class="spinner"></span> Generating…</span>
+<button class="btn btn-go" id="btn-gen">🚀 Generate Showtimes</button>
+</div>
+</div>
+<div class="alert" id="gen-ok"></div>
+<div class="alert" id="gen-err"></div>
+<div id="gen-res" style="display:none;">
+<div class="card" style="margin-top:16px;">
+<div class="card-hdr">📋 Generated Showtimes</div>
+<div class="card-body" style="overflow-x:auto;">
+<table class="rtbl">
+<thead>
+<tr><th>Movie</th><th>Room</th><th>Date</th><th>Time</th><th>End</th><th>Format</th><th>Price</th></tr>
+</thead>
+<tbody id="res-tbody"></tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+(function() {
+   var CSRF = "{{ csrf_token }}";
+   var TODAY = "{{ today }}";
+   /* ── Toggle enable/disable rows ───────────────────────────── */
+   document.querySelectorAll(".en-cb").forEach(function(cb) {
+       cb.addEventListener("change", function() {
+           var row = this.closest("tr");
+           row.classList.toggle("off", !this.checked);
+           row.querySelectorAll("input:not(.en-cb)").forEach(function(el) {
+               el.disabled = !cb.checked;
+           });
+       });
+   });
+   window.toggleAll = function(state) {
+       document.querySelectorAll(".en-cb").forEach(function(cb) {
+           cb.checked = state;
+           cb.dispatchEvent(new Event("change"));
+       });
+   };
+   /* ── Generate ─────────────────────────────────────────────── */
+   document.getElementById("btn-gen").addEventListener("click", async function() {
+       var btn = this;
+       var spin = document.getElementById("gen-spin");
+       var okEl = document.getElementById("gen-ok");
+       var erEl = document.getElementById("gen-err");
+       var resEl = document.getElementById("gen-res");
+       okEl.className = "alert"; erEl.className = "alert"; resEl.style.display = "none";
+       var startDate = document.getElementById("start-date").value;
+       if (!startDate) { showErr(erEl, "Select a start date."); return; }
+       if (startDate < TODAY) { showErr(erEl, "Start date cannot be in the past."); return; }
+       var roomIds = [].slice.call(document.querySelectorAll(".room-cb:checked")).map(function(c){ return parseInt(c.value); });
+       if (!roomIds.length) { showErr(erEl, "Select at least one room."); return; }
+       var configs = [];
+       document.querySelectorAll(".m-row").forEach(function(row) {
+           var mid = parseInt(row.dataset.mid);
+           if (!row.querySelector(".en-cb").checked) return;
+           var slots = [].slice.call(row.querySelectorAll(".sl-cb:checked")).map(function(c){ return c.value; });
+           if (!slots.length) return;
+           configs.push({
+               movie_id: mid,
+               priority: parseInt(row.querySelector(".m-pri").value) || 5,
+               time_slots: slots,
+               base_price: row.querySelector(".m-price").value || "75000",
+               enabled: true,
+           });
+       });
+       if (!configs.length) { showErr(erEl, "Enable at least one movie with time slots."); return; }
+       btn.disabled = true; spin.style.display = "inline-flex";
+       try {
+           var resp = await fetch("/api/cinemas/showtimes/generate/", {
+               method: "POST",
+               headers: { "Content-Type": "application/json", "X-CSRFToken": CSRF },
+               body: JSON.stringify({
+                   start_date: startDate,
+                   num_days: parseInt(document.getElementById("num-days").value) || 1,
+                   traffic_gap_minutes: parseInt(document.getElementById("traffic-gap").value) || 15,
+                   cleanup_minutes: parseInt(document.getElementById("cleanup").value) || 15,
+                   room_ids: roomIds,
+                   movie_configs: configs,
+                   clear_existing_drafts: document.getElementById("clear-drafts").checked,
+               }),
+           });
+           var data = await resp.json();
+           if (!resp.ok) {
+               showErr(erEl, typeof data === "object" ? JSON.stringify(data, null, 2) : data);
+               return;
+           }
+           okEl.className = "alert ok";
+           okEl.innerHTML = "<strong>Success!</strong> Generated " + data.generated_count + " draft showtime(s).";
+           if (data.showtimes && data.showtimes.length) {
+               var tbody = document.getElementById("res-tbody");
+               tbody.innerHTML = "";
+               data.showtimes.forEach(function(st) {
+                   var tr = document.createElement("tr");
+                   tr.innerHTML =
+                       "<td style='font-weight:600'>" + (st.movieTitle || st.movieId) + "</td>" +
+                       "<td>" + (st.hall || "—") + "</td>" +
+                       "<td>" + st.date + "</td>" +
+                       "<td>" + st.time + "</td>" +
+                       "<td>" + st.endTime + "</td>" +
+                       "<td>" + (st.format || "—") + "</td>" +
+                       "<td>" + st.basePrice + "</td>";
+                   tbody.appendChild(tr);
+               });
+               resEl.style.display = "block";
+           }
+       } catch(e) {
+           showErr(erEl, "Network error: " + e.message);
+       } finally {
+           btn.disabled = false; spin.style.display = "none";
+       }
+   });
+   function showErr(el, msg) { el.className = "alert err"; el.textContent = msg; }
+
+   /* ── Save/Clear Config ────────────────────────────────────────── */
+   document.getElementById("btn-save").addEventListener("click", function() {
+       var configs = [];
+       document.querySelectorAll(".m-row").forEach(function(row) {
+           var mid = parseInt(row.dataset.mid);
+           var slots = [].slice.call(row.querySelectorAll(".sl-cb:checked")).map(function(c){ return c.value; });
+           configs.push({
+               id: mid,
+               en: row.querySelector(".en-cb").checked,
+               pri: row.querySelector(".m-pri").value,
+               price: row.querySelector(".m-price").value,
+               slots: slots
+           });
+       });
+       var dataToSave = {
+           global: {
+               days: document.getElementById("num-days").value,
+               traffic: document.getElementById("traffic-gap").value,
+               cleanup: document.getElementById("cleanup").value,
+               clearDrafts: document.getElementById("clear-drafts").checked
+           },
+           rooms: [].slice.call(document.querySelectorAll(".room-cb:checked")).map(function(c){ return parseInt(c.value); }),
+           movies: configs
+       };
+       localStorage.setItem('showtime_gen_config', JSON.stringify(dataToSave));
+       var okEl = document.getElementById("gen-ok");
+       document.getElementById("gen-err").style.display = "none";
+       okEl.className = "alert ok";
+       okEl.innerHTML = "<strong>Saved!</strong> Configuration saved to your browser.";
+       setTimeout(function() { okEl.style.display = "none"; okEl.className = "alert"; }, 3000);
+   });
+
+   document.getElementById("btn-clear").addEventListener("click", function() {
+       if(confirm("Clear saved configuration and reload page?")) {
+           localStorage.removeItem('showtime_gen_config');
+           window.location.reload();
+       }
+   });
+
+   // Load saved config on page load
+   window.addEventListener("DOMContentLoaded", function() {
+       var saved = localStorage.getItem('showtime_gen_config');
+       if (saved) {
+           try {
+               var parsed = JSON.parse(saved);
+               if (parsed.global) {
+                   document.getElementById("num-days").value = parsed.global.days || 1;
+                   document.getElementById("traffic-gap").value = parsed.global.traffic || 15;
+                   document.getElementById("cleanup").value = parsed.global.cleanup || 15;
+                   document.getElementById("clear-drafts").checked = !!parsed.global.clearDrafts;
+               }
+               if (parsed.rooms && parsed.rooms.length > 0) {
+                   document.querySelectorAll(".room-cb").forEach(function(cb) {
+                       cb.checked = parsed.rooms.indexOf(parseInt(cb.value)) !== -1;
+                   });
+               }
+               if (parsed.movies && parsed.movies.length > 0) {
+                   parsed.movies.forEach(function(mConf) {
+                       var row = document.querySelector(".m-row[data-mid='"+mConf.id+"']");
+                       if (row) {
+                           row.querySelector(".en-cb").checked = !!mConf.en;
+                           if (mConf.pri) row.querySelector(".m-pri").value = mConf.pri;
+                           if (mConf.price) row.querySelector(".m-price").value = mConf.price;
+                           row.querySelectorAll(".sl-cb").forEach(function(cb) {
+                               cb.checked = mConf.slots.indexOf(cb.value) !== -1;
+                           });
+                           row.querySelector(".en-cb").dispatchEvent(new Event("change"));
+                       }
+                   });
+               }
+           } catch(e) { console.error("Failed to load saved config", e); }
+       }
+   });
+})();
+</script>
+{% endblock %}

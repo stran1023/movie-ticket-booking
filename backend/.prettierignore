@@ -1,0 +1,2 @@
+# Django templates contain {{ }} and {% %} syntax that Prettier breaks
+templates/

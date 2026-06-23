@@ -1,0 +1,2514 @@
+[
+  {
+    "model": "cinemas.CinemaRoom",
+    "pk": 1,
+    "fields": {
+      "name": "Room A",
+      "total_seats": 120,
+      "seat_map": [
+        {
+          "row": "A",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 1,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 2,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 3,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 4,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 5,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 6,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 7,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 8,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 9,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 10,
+          "type": "couple",
+          "status": "available"
+        }
+      ],
+      "created_at": "2026-02-26T02:05:00Z",
+      "updated_at": "2026-02-26T02:05:00Z",
+      "is_deleted": false
+    }
+  },
+  {
+    "model": "cinemas.CinemaRoom",
+    "pk": 2,
+    "fields": {
+      "name": "Room B",
+      "total_seats": 80,
+      "seat_map": [
+        {
+          "row": "A",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 1,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 2,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 3,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 4,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 5,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 6,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 7,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 8,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 9,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 10,
+          "type": "couple",
+          "status": "available"
+        }
+      ],
+      "created_at": "2026-02-26T02:05:00Z",
+      "updated_at": "2026-02-26T02:05:00Z",
+      "is_deleted": false
+    }
+  },
+  {
+    "model": "cinemas.CinemaRoom",
+    "pk": 3,
+    "fields": {
+      "name": "Room C",
+      "total_seats": 150,
+      "seat_map": [
+        {
+          "row": "A",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "G",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "H",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "I",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "J",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "K",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "L",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "M",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "N",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 1,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 2,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 3,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 4,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 5,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 6,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 7,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 8,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 9,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "O",
+          "number": 10,
+          "type": "couple",
+          "status": "available"
+        }
+      ],
+      "created_at": "2026-02-26T02:05:00Z",
+      "updated_at": "2026-02-26T02:05:00Z",
+      "is_deleted": false
+    }
+  },
+  {
+    "model": "cinemas.CinemaRoom",
+    "pk": 4,
+    "fields": {
+      "name": "Room D",
+      "total_seats": 60,
+      "seat_map": [
+        {
+          "row": "A",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "A",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "B",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 1,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 2,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 3,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 4,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 5,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 6,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 7,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 8,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 9,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "C",
+          "number": 10,
+          "type": "normal",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "D",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 1,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 2,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 3,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 4,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 5,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 6,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 7,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 8,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 9,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "E",
+          "number": 10,
+          "type": "vip",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 1,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 2,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 3,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 4,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 5,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 6,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 7,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 8,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 9,
+          "type": "couple",
+          "status": "available"
+        },
+        {
+          "row": "F",
+          "number": 10,
+          "type": "couple",
+          "status": "available"
+        }
+      ],
+      "created_at": "2026-02-26T02:05:00Z",
+      "updated_at": "2026-02-26T02:05:00Z",
+      "is_deleted": false
+    }
+  }
+]

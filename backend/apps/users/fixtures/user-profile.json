@@ -1,0 +1,65 @@
+[
+  {
+    "model": "users.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "full_name": "Admin User",
+      "phone_number": "0912345678",
+      "identity_card": "123456789",
+      "province": "Ho Chi Minh City",
+      "ward": "District 1",
+      "street_address": "123 Le Loi Street, Ben Nghe Ward",
+      "date_of_birth": "1990-01-15",
+      "gender": "male",
+      "total_points": 0,
+      "avatar_url": "",
+      "avatar": "",
+      "created_at": "2026-02-26T14:21:31.000Z",
+      "updated_at": "2026-02-26T14:21:31.000Z",
+      "is_deleted": false
+    }
+  },
+  {
+    "model": "users.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 4,
+      "full_name": "Member User",
+      "phone_number": "0923456789",
+      "identity_card": "987654321",
+      "province": "Ho Chi Minh City",
+      "ward": "District 2",
+      "street_address": "456 Nguyen Thi Minh Khai Street, Thao Dien Ward",
+      "date_of_birth": "1995-05-20",
+      "gender": "female",
+      "total_points": 1250,
+      "avatar_url": "",
+      "avatar": "",
+      "created_at": "2026-02-26T14:38:54.000Z",
+      "updated_at": "2026-02-26T14:38:54.000Z",
+      "is_deleted": false
+    }
+  },
+  {
+    "model": "users.userprofile",
+    "pk": 3,
+    "fields": {
+      "user": 6,
+      "full_name": "Staff User",
+      "phone_number": "0934567890",
+      "identity_card": "456789123",
+      "province": "Ho Chi Minh City",
+      "ward": "District 3",
+      "street_address": "789 Vo Thi Sau Street, Ward 7",
+      "date_of_birth": "1988-11-08",
+      "gender": "male",
+      "total_points": 750,
+      "avatar_url": "",
+      "avatar": "",
+      "created_at": "2026-02-26T14:46:36.000Z",
+      "updated_at": "2026-02-26T14:46:36.000Z",
+      "is_deleted": false
+    }
+  }
+]

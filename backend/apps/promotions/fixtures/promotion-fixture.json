@@ -1,0 +1,91 @@
+[
+  {
+    "model": "promotions.userpromotion",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-03-08T02:30:11.475Z",
+      "updated_at": "2026-03-08T13:08:51.517Z",
+      "is_deleted": false,
+      "title": "HAPPINESS – BẮP NƯỚC TRAO TAY, HẠNH PHÚC ĐONG ĐẦY",
+      "description": "Tháng 3, tháng của yêu thương! Không chỉ có ngày 8/3 dành cho các nàng, mà còn có Ngày Quốc tế Hạnh Phúc 20/3, là dịp để trao đi những điều ngọt ngào và nhận lại niềm vui trọn vẹn.\r\nChào đón Ngày Quốc tế Hạnh Phúc, giảm ngay 30% giá vé khi đi xem phim",
+      "discount_type": "FIXED_AMOUNT",
+      "discount_value": "30.00",
+      "stacking_rule": "STACKABLE",
+      "max_discount_cap": null,
+      "type": "USER",
+      "start_date": "2026-03-01",
+      "end_date": "2026-03-31",
+      "banner_url": "https://iguov8nhvyobj.vcdn.cloud/media/wysiwyg/2026/022026/HAPPINESS_N_O_240x201.png",
+      "target_campaign": "HOLIDAY",
+      "min_age": null,
+      "max_age": null
+    }
+  },
+  {
+    "model": "promotions.userpromotion",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-03-08T02:33:55.564Z",
+      "updated_at": "2026-03-08T02:33:55.566Z",
+      "is_deleted": false,
+      "title": "ƯU ĐÃI U22 - GIẢM NGAY 15%",
+      "description": "Các bạn học sinh, sinh viên nhà mình đã quyết định địa điểm nào để tụ họp bạn bè chưa ta, hãy chọn chúng tôi để xem phim:\r\nGIẢM NGAY 15% cho khách hàng dưới 22 tuổi (tối đa 300k)",
+      "discount_type": "PERCENTAGE",
+      "discount_value": "0.15",
+      "stacking_rule": "STACKABLE",
+      "max_discount_cap": "300000.00",
+      "type": "USER",
+      "start_date": "2026-03-01",
+      "end_date": "2026-03-31",
+      "banner_url": "https://bonchon.com.vn/sites/default/files/inline-images/fb_post_u22-01_1_0.jpg",
+      "target_campaign": "AGE_RANGE",
+      "min_age": 16,
+      "max_age": 22
+    }
+  },
+  {
+    "model": "promotions.userpromotion",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-03-08T02:35:59.025Z",
+      "updated_at": "2026-03-08T02:35:59.028Z",
+      "is_deleted": false,
+      "title": "Ưu đãi sinh nhật giảm sốc đến 30%, tháng 10 tha hồ xem phim!",
+      "description": "Từ ngày 01/10/2026 đến 31/10/2026, Rạp chiếu phim chúng tôi tung ra chương trình khuyến mãi cực kỳ hấp dẫn dành cho các bạn có sinh nhật trong tháng 10.",
+      "discount_type": "PERCENTAGE",
+      "discount_value": "0.30",
+      "stacking_rule": "STACKABLE",
+      "max_discount_cap": null,
+      "type": "USER",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "banner_url": "https://cdn.tgdd.vn/Files/2019/05/24/1168670/sinhnhatthang10_800x450.png",
+      "target_campaign": "BIRTHDAY",
+      "min_age": null,
+      "max_age": null
+    }
+  },
+  {
+    "model": "promotions.moviepromotion",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-03-07T16:10:29.227Z",
+      "updated_at": "2026-03-07T16:10:29.312Z",
+      "is_deleted": false,
+      "title": "[Movie] PROMO THỎ ƠI (07/03/2026 ~ 31/03/2026)",
+      "description": "1. Đối tượng áp dụng:\r\n- Tất cả quý khách có đăng ký thành viên\r\n2. Nội dung\r\n- 50 người sớm nhất sẽ được giảm 20% Giá vé, nhanh tay lên nào!",
+      "discount_type": "PERCENTAGE",
+      "discount_value": "0.20",
+      "stacking_rule": "STACKABLE",
+      "max_discount_cap": null,
+      "type": "MOVIE",
+      "start_date": "2026-03-07",
+      "end_date": "2026-03-31",
+      "banner_url": "https://c8.alamy.com/comp/W701D7/movie-tickets-discount-web-banner-template-50-percent-discount-for-students-special-price-cinema-invitation-for-pupils-schoolchildren-movie-theatre-discount-offer-coupon-design-layout-W701D7.jpg",
+      "code": "THOOI50",
+      "movie": 1,
+      "usage_limit": 50,
+      "used_count": 0
+    }
+  }
+]

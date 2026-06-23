@@ -1,0 +1,21 @@
+/* Fix for black text in the preview table */
+.import-preview table td,
+.import-preview table th,
+.import-preview table span {
+    color: var(--body-fg, #e2e8f0) !important;
+    background-color: transparent !important;
+}
+ 
+/* Beautiful green for new additions */
+.import-preview ins, .import-preview ins td {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+ 
+/* Soft red for deletions */
+.import-preview del, .import-preview del td {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    color: inherit !important;
+    text-decoration: line-through !important;
+}

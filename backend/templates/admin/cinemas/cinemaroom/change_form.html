@@ -1,0 +1,419 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'cinema/seat_editor.css' %}">
+<style>
+    /* Beautiful Collapsible Styles */
+    .collapsible-section {
+        margin: 20px 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        background: white;
+    }
+    
+    .collapsible-button {
+        width: 100%;
+        padding: 18px 24px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        border: none;
+        outline: none;
+    }
+    
+    .collapsible-button:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        padding-left: 30px;
+    }
+    
+    .collapsible-button .button-text {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .collapsible-button .button-text i {
+        font-size: 24px;
+        transition: transform 0.3s ease;
+    }
+    
+    .collapsible-button .arrow {
+        font-size: 24px;
+        transition: transform 0.3s ease;
+    }
+    
+    .collapsible-button.active .arrow {
+        transform: rotate(180deg);
+    }
+    
+    .collapsible-button.active .button-text i {
+        transform: scale(1.1);
+    }
+    
+    .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        background: #f8fafc;
+    }
+    
+    .collapsible-content.show {
+        max-height: 2000px; /* Adjust based on content */
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .content-inner {
+        padding: 24px;
+    }
+    
+    /* Status badge */
+    .designer-status {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: normal;
+        margin-left: 12px;
+    }
+    
+    /* Enhanced designer toolbar */
+    #designer-toolbar {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 0 0 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    #designer-toolbar button {
+        padding: 10px 20px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+        background: #f1f5f9;
+        color: #1e293b;
+        font-size: 14px;
+    }
+    
+    #designer-toolbar button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    #designer-toolbar button.active {
+        background: #3b82f6;
+        color: white;
+        box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+    }
+    
+    #designer-toolbar button[data-tool="seat"].active {
+        background: #3b82f6;
+    }
+    
+    #designer-toolbar button[data-tool="erase"].active {
+        background: #ef4444;
+    }
+    
+    #seat-type {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 2px solid #e2e8f0;
+        background: white;
+        font-weight: 500;
+        cursor: pointer;
+        min-width: 160px;
+        font-size: 14px;
+        color: #1e293b;
+    }
+    
+    #seat-type:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    }
+    
+    #add-row, #add-col {
+        background: #10b981 !important;
+        color: white !important;
+    }
+    
+    #add-row:hover, #add-col:hover {
+        background: #059669 !important;
+    }
+    
+    #seat-counter {
+        margin-left: auto;
+        font-weight: 600;
+        color: #3b82f6;
+        background: #eff6ff;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 14px;
+        border: 1px solid #bfdbfe;
+    }
+    
+    /* Enhanced screen */
+    #screen {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        border-radius: 12px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        margin: 0 0 20px 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        position: relative;
+        border: 1px solid #475569;
+    }
+    
+    #screen::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 5%;
+        width: 90%;
+        height: 20px;
+        background: rgba(15, 23, 42, 0.3);
+        border-radius: 50%;
+        filter: blur(8px);
+        z-index: -1;
+    }
+    
+    /* Enhanced grid */
+    #seat-grid {
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: inset 0 2px 8px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* Help text styling */
+    .help-text {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0 0 0;
+        border-left: 6px solid #3b82f6;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .help-text p {
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 16px;
+    }
+    
+    .help-text ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #475569;
+    }
+    
+    .help-text li {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+    
+    .help-text li strong {
+        color: #3b82f6;
+    }
+    
+    /* Quick stats */
+    .quick-stats {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .stat-label {
+        color: #64748b;
+        font-size: 14px;
+    }
+    
+    .stat-value {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 18px;
+    }
+    
+    /* Badge for seat type */
+    .seat-type-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+    
+    .seat-type-badge.normal {
+        background: #3b82f6;
+        color: white;
+    }
+    
+    .seat-type-badge.vip {
+        background: #f59e0b;
+        color: white;
+    }
+    
+    .seat-type-badge.couple {
+        background: #ec4899;
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block after_related_objects %}
+<div class="collapsible-section">
+    <button type="button" class="collapsible-button" id="designerCollapsible">
+        <span class="button-text">
+            <i>🎪</i>
+            <span>Seat Layout Designer</span>
+            <span class="designer-status" id="designerStatus">Ready to edit</span>
+        </span>
+        <span class="arrow">▼</span>
+    </button>
+    
+    <div class="collapsible-content" id="designerContent">
+        <div class="content-inner">
+            <!-- Designer toolbar -->
+            <div id="designer-toolbar">
+                <button type="button" data-tool="seat" class="active">
+                    <span>💺</span> Seat
+                </button>
+                <button type="button" data-tool="erase">
+                    <span>🗑️</span> Erase
+                </button>
+                
+                <select id="seat-type">
+                    <option value="normal">💺 Normal Seat</option>
+                    <option value="vip">⭐ VIP Seat</option>
+                    <option value="couple">💕 Couple Seat (2 seats)</option>
+                </select>
+                
+                <button type="button" id="add-row">➕ Add Row</button>
+                <button type="button" id="add-col">➕ Add Column</button>
+                
+                <span id="seat-counter">Total seats: 0</span>
+            </div>
+
+            <!-- Seat layout -->
+            <div class="seat-layout-container">
+                <div id="screen">SCREEN</div>
+                <div id="seat-grid"></div>
+                <div style="margin-bottom: 10px;"><strong>Legend:</strong>
+                    <span style="display:inline-block; width:20px; height:20px; background:#007bff; border-radius:4px; margin:0 5px;"></span> Normal
+                    <span style="display:inline-block; width:20px; height:20px; background:#ffc107; border-radius:4px; margin:0 5px;"></span> VIP
+                    <span style="display:inline-block; width:40px; height:20px; background:#e83e8c; border-radius:4px; margin:0 5px;"></span> Couple
+                </div>
+            </div>
+
+            <!-- Help text with icons -->
+            <div class="help-text">
+                <p>📋 Instructions:</p>
+                <ul>
+                    <li><strong>💺 Adding seats:</strong> Click on empty cells (➕) to add seats</li>
+                    <li><strong>🎯 Seat type:</strong> Select from Normal, VIP, or Couple before adding</li>
+                    <li><strong>💕 Couple seats:</strong> Click on two adjacent seats to combine them</li>
+                    <li><strong>⚠️ Row consistency:</strong> Cannot mix couple seats with normal/VIP in same row</li>
+                    <li><strong>🗑️ Erasing:</strong> Use Erase tool or click Clear All to remove seats</li>
+                    <li><strong>📏 Grid management:</strong> Add/remove rows and columns as needed</li>
+                    <li><strong>🔢 Auto-numbering:</strong> Seats are numbered A1, A2, etc. automatically</li>
+                    <li><strong>💕 Couple display:</strong> Shows as range (e.g., A1-A2)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'cinema/seat_editor.js' %}"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const collapsible = document.getElementById("designerCollapsible");
+    const content = document.getElementById("designerContent");
+    const status = document.getElementById("designerStatus");
+    const currentToolSpan = document.getElementById("currentTool");
+    const currentSeatTypeSpan = document.getElementById("currentSeatType");
+    
+    // Collapsible functionality
+    collapsible.addEventListener("click", function() {
+        this.classList.toggle("active");
+        content.classList.toggle("show");
+        
+        // Update status and icon
+        if (content.classList.contains("show")) {
+            status.textContent = "Editing";
+            status.style.background = "rgba(16, 185, 129, 0.3)";
+        } else {
+            status.textContent = "Collapsed";
+            status.style.background = "rgba(255,255,255,0.2)";
+        }
+        
+        // Trigger resize event for grid if visible
+        if (content.classList.contains("show") && window.renderSeatGrid) {
+            setTimeout(() => window.renderSeatGrid(), 300);
+        }
+    });
+    
+    // Update tool display (this will be called from seat_editor.js)
+    window.updateToolDisplay = function(tool, seatType) {
+        if (tool === 'seat') {
+            currentToolSpan.innerHTML = `Seat <span class="seat-type-badge ${seatType}">${seatType.charAt(0).toUpperCase() + seatType.slice(1)}</span>`;
+        } else {
+            currentToolSpan.innerHTML = 'Erase';
+        }
+        
+        // Update status
+        status.textContent = `Using ${tool} tool`;
+    };
+    
+    // Update grid size display
+    window.updateGridSize = function(height, width) {
+        document.getElementById("gridSize").textContent = `${height}x${width}`;
+    };
+    
+    // Store render function
+    if (typeof render === 'function') {
+        window.renderSeatGrid = render;
+    }
+    
+    // REMOVED: The code that automatically opens it
+    // Now it starts collapsed by default
+    
+    // Set initial status
+    status.textContent = "Collapsed";
+    status.style.background = "rgba(255,255,255,0.2)";
+});
+</script>
+{% endblock %}
