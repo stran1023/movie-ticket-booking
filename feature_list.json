@@ -1,0 +1,180 @@
+{
+  "project": "cinebook",
+  "last_updated": "2026-06-25",
+  "rules": {
+    "single_active_feature": true,
+    "passing_requires_evidence": true,
+    "do_not_skip_verification": true
+  },
+  "status_legend": {
+    "not_started": "Work has not begun.",
+    "in_progress": "The feature is the current active task — only one at a time.",
+    "blocked": "Work cannot continue until a documented blocker is resolved.",
+    "passing": "Required verification has passed and evidence is recorded."
+  },
+  "features": [
+    {
+      "id": "analytics-001",
+      "priority": 1,
+      "area": "analytics",
+      "name": "Analytics PDF export",
+      "description": "Staff can download a PDF report of KPIs and booking trends from the admin dashboard.",
+      "title": "Analytics PDF export",
+      "user_visible_behavior": "Staff can download a PDF report of KPIs and booking trends from the admin dashboard.",
+      "status": "in_progress",
+      "dependencies": [],
+      "verification": [
+        "cd backend && uv run python manage.py test analytics",
+        "Start the Django server and authenticate as staff.",
+        "Hit GET /api/analytics/report/pdf/ and confirm a valid PDF is returned (non-zero Content-Length, Content-Type: application/pdf).",
+        "Open the PDF and verify charts/tables render without broken images."
+      ],
+      "evidence": [],
+      "notes": "backend/analytics/utils/pdf_generator.py has uncommitted changes."
+    },
+    {
+      "id": "movies-001",
+      "priority": 2,
+      "area": "movies",
+      "name": "Movie listing, detail, and showtimes by date",
+      "description": "Users can browse movies, open a detail page, and see available showtimes filtered by date.",
+      "title": "Movie listing, detail, and showtimes by date",
+      "user_visible_behavior": "Users can browse movies, open a detail page, and see available showtimes filtered by date.",
+      "status": "passing",
+      "dependencies": [],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.movies",
+        "GET /api/movies/ returns paginated list.",
+        "GET /api/movies/{id}/showtimes/?date=YYYY-MM-DD returns showtimes for that date only."
+      ],
+      "evidence": ["Initial commit — movies app implemented"],
+      "notes": ""
+    },
+    {
+      "id": "bookings-001",
+      "priority": 3,
+      "area": "bookings",
+      "name": "Seat hold and booking flow",
+      "description": "Users can hold seats (15-min session cap, 5-min per-seat TTL), confirm a booking, and receive tickets.",
+      "title": "Seat hold and booking flow",
+      "user_visible_behavior": "Users can hold seats (15-min session cap, 5-min per-seat TTL), confirm a booking, and receive tickets.",
+      "status": "passing",
+      "dependencies": ["movies-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.bookings",
+        "Attempt to hold the same seat concurrently from two sessions — second request must be rejected.",
+        "Hold a seat, wait for 5-min TTL to expire, confirm seat is auto-released via WebSocket event."
+      ],
+      "evidence": ["Initial commit — bookings app implemented"],
+      "notes": "Seat hold uses Lua compare-and-delete in Redis — do not replace with plain GET+DEL."
+    },
+    {
+      "id": "payments-001",
+      "priority": 4,
+      "area": "bookings",
+      "name": "VNPay and MoMo payment callbacks",
+      "description": "Bookings are confirmed and tickets issued after successful payment from either gateway.",
+      "title": "VNPay and MoMo payment callbacks",
+      "user_visible_behavior": "Bookings are confirmed and tickets issued after successful payment from either gateway.",
+      "status": "passing",
+      "dependencies": ["bookings-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.bookings.tests.test_payments",
+        "Simulate a VNPay HMAC-SHA512 callback — booking status must change to CONFIRMED.",
+        "Simulate a MoMo IPN POST — same confirmation flow runs."
+      ],
+      "evidence": ["Initial commit — payment callbacks implemented"],
+      "notes": "Both callback endpoints are AllowAny — HMAC verification is the auth mechanism."
+    },
+    {
+      "id": "promotions-001",
+      "priority": 5,
+      "area": "promotions",
+      "name": "Promotions validation and mutual exclusion with points",
+      "description": "Users can apply a promo code OR use loyalty points at checkout — never both simultaneously.",
+      "title": "Promotions validation and mutual exclusion with points",
+      "user_visible_behavior": "Users can apply a promo code OR use loyalty points at checkout — never both simultaneously.",
+      "status": "passing",
+      "dependencies": ["bookings-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.promotions",
+        "Attempt to submit a booking with both points_used > 0 and a promo code — API must reject with 400.",
+        "Apply a valid promo code and confirm discount_amount matches promo value."
+      ],
+      "evidence": ["Initial commit — promotions app implemented"],
+      "notes": "FlatPricePromotion.is_active is managed by nightly Celery task — never set it in code."
+    },
+    {
+      "id": "points-001",
+      "priority": 6,
+      "area": "users",
+      "name": "Loyalty points earn and redeem",
+      "description": "Users earn points only on full-price bookings; redeemed points reduce the ticket price.",
+      "title": "Loyalty points earn and redeem",
+      "user_visible_behavior": "Users earn points only on full-price bookings; redeemed points reduce the ticket price.",
+      "status": "passing",
+      "dependencies": ["payments-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.users",
+        "Complete a full-price booking — PointTransaction EARN record must be created.",
+        "Complete a discounted booking (promo or points) — no points must be awarded."
+      ],
+      "evidence": ["Initial commit — points system implemented"],
+      "notes": "Points earned only when points_used == 0 AND discount_amount == 0."
+    },
+    {
+      "id": "concessions-001",
+      "priority": 7,
+      "area": "concessions",
+      "name": "Concessions ordering",
+      "description": "Users can add food and beverage items (including combos) to their booking.",
+      "title": "Concessions ordering",
+      "user_visible_behavior": "Users can add food and beverage items (including combos) to their booking.",
+      "status": "passing",
+      "dependencies": ["bookings-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test apps.concessions",
+        "GET /api/concessions/ returns items with variants.",
+        "POST a ConcessionOrder attached to a booking — ConcessionItems are created with correct prices."
+      ],
+      "evidence": ["Initial commit — concessions app implemented"],
+      "notes": ""
+    },
+    {
+      "id": "frontend-001",
+      "priority": 8,
+      "area": "frontend",
+      "name": "7-step booking wizard (frontend)",
+      "description": "Users complete the full booking flow: movie → showtime → seats → concessions → promo/points → confirm → payment redirect.",
+      "title": "7-step booking wizard (frontend)",
+      "user_visible_behavior": "Users complete the full booking flow: movie → showtime → seats → concessions → promo/points → confirm → payment redirect.",
+      "status": "passing",
+      "dependencies": ["payments-001", "promotions-001", "concessions-001"],
+      "verification": [
+        "cd frontend && pnpm run build  # must exit 0",
+        "cd frontend && pnpm run type-check  # must exit 0",
+        "Walk through all 7 wizard steps in the browser and confirm no console errors."
+      ],
+      "evidence": ["Initial commit — booking wizard implemented"],
+      "notes": "WebSocket seat updates use the ws://localhost:8000/ws/showtime/{id}/ channel."
+    },
+    {
+      "id": "analytics-002",
+      "priority": 9,
+      "area": "analytics",
+      "name": "Analytics dashboard KPIs (API)",
+      "description": "Admin API returns revenue totals, occupancy rates, and top movies for a given date range.",
+      "title": "Analytics dashboard KPIs (API)",
+      "user_visible_behavior": "Admin API returns revenue totals, occupancy rates, and top movies for a given date range.",
+      "status": "not_started",
+      "dependencies": ["analytics-001"],
+      "verification": [
+        "cd backend && uv run python manage.py test analytics",
+        "GET /api/analytics/kpis/?start=YYYY-MM-DD&end=YYYY-MM-DD returns expected fields.",
+        "Verify numbers match a manual count of Booking/Ticket rows for the same range."
+      ],
+      "evidence": [],
+      "notes": "Only begin after analytics-001 (PDF export) is passing."
+    }
+  ]
+}
