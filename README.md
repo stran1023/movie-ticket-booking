@@ -7,16 +7,31 @@ A full-stack cinema ticket booking platform built with Django and Next.js. Suppo
 ## Features
 
 - **Movie browsing** — full-text search, filters (now showing / coming soon), movie detail with trailers
+<img width="1897" height="862" alt="image" src="https://github.com/user-attachments/assets/82059da6-4bf2-4080-b882-14fbae8faeec" />
+
 - **7-step booking wizard** — movie → showtime → seats → concessions → confirm → payment → receipt
+<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/912236b5-49ed-4081-84c6-8b162cb27309" />
+<img width="1900" height="870" alt="image" src="https://github.com/user-attachments/assets/c96ebd9c-0590-4c50-94d1-25403eb9b18a" />
+<img width="1897" height="867" alt="image" src="https://github.com/user-attachments/assets/eb743c24-4f5e-4f0d-96a5-f39b6630b9c3" />
+<img width="1901" height="867" alt="image" src="https://github.com/user-attachments/assets/570773d9-9021-4f8b-b903-a13b67151a8e" />
+<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/21b5dea8-02d9-4863-97fd-fbb400b928b3" />
+<img width="1897" height="866" alt="image" src="https://github.com/user-attachments/assets/f67edf3c-db11-40a2-aa65-5eb84e5b0826" />
+<img width="1900" height="870" alt="image" src="https://github.com/user-attachments/assets/a6ed6657-de13-42aa-b63b-4cdb14097e93" />
+
+- **Admin dashboard** — Django Jazzmin UI with analytics, PDF export, showtime generator, seat map editor
+<img width="1900" height="862" alt="image" src="https://github.com/user-attachments/assets/1311c3f5-7e44-42dc-b685-a3e2f715834a" />
+<img width="1901" height="867" alt="image" src="https://github.com/user-attachments/assets/f0445762-4160-484d-81cd-1e31026077de" />
+<img width="1900" height="870" alt="image" src="https://github.com/user-attachments/assets/1068fd04-8f0d-4a44-9d24-feb6ed8c1142" />
+<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/1a386b6e-2101-4710-816b-646894013f8b" />
+
 - **Real-time seat map** — WebSocket-powered live seat hold/release/book updates across all clients
 - **Seat hold system** — 5-minute per-seat TTL + 15-minute session hard cap via Redis
-- **Payment gateways** — VNPay (HMAC-SHA512) and MoMo (HMAC-SHA256) with sandbox support
 - **Loyalty points** — earn points on full-price bookings, redeem for discounts (configurable caps)
 - **Promotions engine** — user promotions, movie promo codes, flat-price seat promotions, community-shared codes
 - **Concessions** — categorized snacks/drinks, combo packs, server-side price verification
-- **Downloadable ticket** — QR code + barcode receipt, exportable as PNG
-- **Admin dashboard** — Django Jazzmin UI with analytics, PDF export, showtime generator, seat map editor
 - **Email flows** — account activation, password reset, movie release reminders (Celery)
+- **Downloadable ticket** — QR code + barcode receipt, exportable as PNG
+- **Payment gateways** — VNPay (HMAC-SHA512) and MoMo (HMAC-SHA256) with sandbox support
 
 ---
 
